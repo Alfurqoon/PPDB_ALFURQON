@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,15 +9,15 @@
   <title>PPDB KB IT Al Furqon</title>
 
   <!-- Favicon Website -->
-<link rel="icon" type="image/png" href="images/logo.png">
-<link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-/* =====================================================
+    /* =====================================================
    KB IT AL FURQON — Ocean Kids
    Daftar isi:
    1. Variabel & dasar      6. Kelas & kegiatan
@@ -27,1271 +28,2404 @@
                            11. Responsif & aksesibilitas
 ===================================================== */
 
-/* ---------- 1. Variabel & dasar ---------- */
-:root{
-  --blue:#087eae;
-  --blue-dark:#075477;
-  --blue-deep:#064866;
-  --blue-text:#075985;
-  --blue-soft:#eaf7ff;
-  --sky:#c5efff;
-  --gold:#ffd447;
-  --gold-dark:#e6a900;
-  --gold-soft:#fff6d8;
-  --ink:#25445a;
-  --muted:#647d8d;
-  --line:rgba(8,126,174,.18);
-  --card:rgba(255,255,255,.9);
-  --radius:24px;
-  --shadow:0 12px 30px rgba(8,91,130,.10);
-  --shadow-hover:0 18px 35px rgba(8,126,174,.16);
-}
+    /* ---------- 1. Variabel & dasar ---------- */
+    :root {
+      --blue: #087eae;
+      --blue-dark: #075477;
+      --blue-deep: #064866;
+      --blue-text: #075985;
+      --blue-soft: #eaf7ff;
+      --sky: #c5efff;
+      --gold: #ffd447;
+      --gold-dark: #e6a900;
+      --gold-soft: #fff6d8;
+      --ink: #25445a;
+      --muted: #647d8d;
+      --line: rgba(8, 126, 174, .18);
+      --card: rgba(255, 255, 255, .9);
+      --radius: 24px;
+      --shadow: 0 12px 30px rgba(8, 91, 130, .10);
+      --shadow-hover: 0 18px 35px rgba(8, 126, 174, .16);
+    }
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-html{scroll-behavior:smooth;scroll-padding-top:90px}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px
+    }
 
-body{
-  font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
-  color:var(--ink);
-  line-height:1.65;
-  background:linear-gradient(135deg,#a5ddf5,#c5efff,#9edcf0) fixed;
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-body.locked{overflow:hidden}
+    body {
+      font-family: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      line-height: 1.65;
+      background: linear-gradient(135deg, #a5ddf5, #c5efff, #9edcf0) fixed;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-h1,h2,h3,h4{font-weight:900;line-height:1.2;color:var(--blue-dark)}
-a{color:inherit;text-decoration:none}
-ul,ol{padding-left:1.2rem}
-img,video,iframe{max-width:100%}
-::selection{background:var(--gold);color:var(--blue-dark)}
+    body.locked {
+      overflow: hidden
+    }
 
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--blue-dark)
+    }
 
-/* ---------- 2. Layout umum ---------- */
-.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
-.section{padding:72px 0}
-.section-soft{background:rgba(255,255,255,.4)}
+    a {
+      color: inherit;
+      text-decoration: none
+    }
 
-.section-heading{max-width:680px;margin-bottom:36px}
-.section-heading h2{
-  font-size:clamp(1.8rem,4vw,2.5rem);
-  letter-spacing:-.5px;
-  color:var(--blue-text);
-  margin:8px 0 12px;
-}
-.section-heading h2::after{
-  content:"";display:block;width:65px;height:5px;margin-top:13px;
-  border-radius:20px;background:var(--gold);
-}
-.section-heading p,.muted{color:var(--muted)}
+    ul,
+    ol {
+      padding-left: 1.2rem
+    }
 
-.eyebrow,.panel-kicker{
-  display:inline-block;
-  font-size:.75rem;font-weight:800;letter-spacing:.16em;
-  color:var(--gold-dark);
-}
-.panel-kicker{display:block;margin-bottom:12px;color:var(--blue)}
+    img,
+    video,
+    iframe {
+      max-width: 100%
+    }
 
-/* Kartu dasar */
-.panel{
-  background:var(--card);
-  border:2px solid #e5f4fc;
-  border-radius:var(--radius);
-  padding:28px;
-  box-shadow:var(--shadow);
-  transition:transform .3s ease,box-shadow .3s ease;
-}
-.panel:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
-.panel h3{margin-bottom:12px}
+    ::selection {
+      background: var(--gold);
+      color: var(--blue-dark)
+    }
 
-/* Tombol */
-.button{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:13px 24px;border-radius:999px;border:2px solid transparent;
-  font:inherit;font-weight:800;cursor:pointer;
-  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
-}
-.button:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.14)}
-.button-primary{background:var(--gold);color:var(--blue-dark)}
-.button-primary:hover{background:#ffe477}
-.button-ghost{border-color:rgba(255,255,255,.7);color:#fff}
-.button-light{background:#fff;color:var(--blue-dark)}
-.button-wa{width:100%;background:#1fa855;color:#fff}
-.button-wa:hover{background:#188a46}
+    :focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px
+    }
 
-/* ---------- 3. Intro screen ---------- */
-.intro-screen{
-  position:fixed;inset:0;z-index:9999;
-  display:flex;align-items:center;justify-content:center;overflow:hidden;
-  background:linear-gradient(145deg,#087eae 0%,#12a9d5 50%,#67d5ed 100%);
-  transition:opacity .9s ease,visibility .9s ease;
-}
-.intro-screen.hide{opacity:0;visibility:hidden;pointer-events:none}
+    /* ---------- 2. Layout umum ---------- */
+    .wrap {
+      width: min(1120px, 100% - 32px);
+      margin-inline: auto
+    }
 
-.intro-content{
-  position:relative;z-index:3;width:min(90%,560px);
-  text-align:center;color:#fff;
-  animation:appear 1.2s ease both;
-}
-.intro-logo{
-  width:115px;height:115px;margin:0 auto 22px;padding:9px;
-  background:#fff;border-radius:30px;
-  box-shadow:0 12px 35px rgba(0,42,90,.2);
-  animation:bounce 3s ease-in-out infinite;
-}
-.intro-logo img{width:100%;height:100%;object-fit:contain}
-.intro-label{display:block;margin-bottom:10px;font-size:13px;font-weight:900;letter-spacing:4px}
-.intro-content h1{
-  margin-bottom:15px;color:#fff;
-  font-size:clamp(30px,6vw,48px);
-  text-shadow:0 4px 0 rgba(0,66,110,.2);
-}
-.intro-content p{max-width:430px;margin:0 auto;font-size:16px;line-height:1.8;color:#eafaff}
-.intro-decoration{margin:22px 0;font-size:25px;animation:bounce 3s ease-in-out infinite}
-.intro-content small{display:block;margin-top:22px;font-size:11px;font-weight:800;letter-spacing:2px;color:#e0f8ff}
+    .section {
+      padding: 72px 0
+    }
 
-#introButton{
-  border:0;padding:15px 34px;border-radius:50px;
-  background:#ffd34f;color:#064c79;
-  font:inherit;font-size:16px;font-weight:900;cursor:pointer;
-  box-shadow:0 7px 0 #dba82a;transition:.25s ease;
-}
-#introButton:hover{transform:translateY(-4px);box-shadow:0 11px 0 #dba82a}
-#introButton:active{transform:translateY(3px);box-shadow:0 3px 0 #dba82a}
-#introButton span{display:inline-block;margin-left:8px;transition:transform .25s ease}
-#introButton:hover span{transform:translateX(5px)}
+    .section-soft {
+      background: rgba(255, 255, 255, .4)
+    }
 
-.intro-animals span{position:absolute;z-index:2;font-size:42px;user-select:none}
-.intro-fish{top:18%;left:-70px;animation:swim 17s linear infinite}
-.intro-dolphin{top:65%;right:-80px;animation:swim-reverse 20s linear infinite}
-.intro-turtle{bottom:13%;left:12%;animation:float 4s ease-in-out infinite}
-.intro-octopus{top:15%;right:12%;animation:float 5s ease-in-out infinite}
-.intro-star{bottom:20%;right:13%;animation:twinkle 2s ease-in-out infinite}
+    .section-heading {
+      max-width: 680px;
+      margin-bottom: 36px
+    }
 
-.intro-bubbles span{position:absolute;bottom:-50px;font-size:25px;animation:bubble 12s linear infinite}
-.intro-bubbles span:nth-child(1){left:10%}
-.intro-bubbles span:nth-child(2){left:35%;animation-delay:3s}
-.intro-bubbles span:nth-child(3){left:70%;animation-delay:5s}
-.intro-bubbles span:nth-child(4){left:90%;animation-delay:1s}
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: -.5px;
+      color: var(--blue-text);
+      margin: 8px 0 12px;
+    }
 
-.intro-wave{position:absolute;left:-10%;bottom:-100px;width:120%;height:180px;border-radius:45% 45% 0 0}
-.intro-wave-one{background:rgba(255,255,255,.2);transform:rotate(-4deg)}
-.intro-wave-two{bottom:-125px;background:rgba(255,255,255,.13);transform:rotate(4deg)}
+    .section-heading h2::after {
+      content: "";
+      display: block;
+      width: 65px;
+      height: 5px;
+      margin-top: 13px;
+      border-radius: 20px;
+      background: var(--gold);
+    }
 
-/* ---------- 4. Header ---------- */
-.site-header{
-  position:sticky;top:0;z-index:50;
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:12px 24px;
-  background:rgba(255,255,255,.94);backdrop-filter:blur(16px);
-  border-bottom:2px solid #e6f5ff;
-  box-shadow:0 4px 20px rgba(8,91,130,.06);
-}
-.brand{display:flex;align-items:center;gap:12px}
-.brand strong{display:block;font-size:.95rem;font-weight:900;letter-spacing:.04em;color:var(--blue-dark)}
-.brand small{display:block;font-size:.72rem;color:var(--muted)}
-.brand-mark{
-  display:grid;place-items:center;overflow:hidden;
-  width:44px;height:44px;border-radius:14px;
-  background:#fff;box-shadow:0 5px 14px rgba(8,126,174,.2);
-}
-.brand-mark img{width:100%;height:100%;object-fit:contain}
+    .section-heading p,
+    .muted {
+      color: var(--muted)
+    }
 
-.menu-toggle{
-  display:none;padding:6px 12px;
-  border:1px solid var(--line);border-radius:10px;
-  background:#fff;font-size:1.3rem;cursor:pointer;
-}
-#mainNav{display:flex;align-items:center;gap:6px}
-#mainNav a{
-  padding:8px 14px;border-radius:999px;
-  font-size:.92rem;font-weight:700;color:var(--blue-dark);
-  transition:.25s ease;
-}
-#mainNav a:hover{background:var(--blue-soft);color:var(--blue);transform:translateY(-2px)}
-#mainNav .nav-cta{background:var(--gold);font-weight:800;box-shadow:0 5px 12px rgba(255,212,71,.3)}
-#mainNav .nav-cta:hover{background:#ffe477;color:var(--blue-dark)}
+    .eyebrow,
+    .panel-kicker {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      color: var(--gold-dark);
+    }
 
-/* ---------- 5. Hero & info singkat ---------- */
-.hero{
-  position:relative;isolation:isolate;overflow:hidden;
-  display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center;
-  padding:80px max(24px,calc((100% - 1120px)/2));
-  color:#fff;
-  border-radius:0 0 55px 55px;
-  background:
-    radial-gradient(circle at 85% 20%,rgba(255,255,255,.16) 0 65px,transparent 66px),
-    radial-gradient(circle at 10% 90%,rgba(255,212,71,.18) 0 90px,transparent 91px),
-    linear-gradient(135deg,#075477,#0798c8 65%,#35bce4);
-}
-.hero-pattern{
-  position:absolute;inset:0;z-index:-1;opacity:.22;
-  background-image:radial-gradient(#fff 2px,transparent 2px);
-  background-size:32px 32px;
-  animation:patternMove 25s linear infinite;
-}
-.hero .eyebrow{color:var(--gold)}
-.hero h1{
-  margin:12px 0 16px;color:#fff;
-  font-size:clamp(2.2rem,6vw,3.6rem);
-  text-shadow:0 3px 15px rgba(0,0,0,.08);
-}
-.hero h1 em{color:var(--gold);font-style:normal}
-.hero p{max-width:520px;font-size:1.05rem;opacity:.94}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 22px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:18px;font-size:.9rem;font-weight:800;color:var(--gold)}
-.hero-content{animation:fadeUp .8s ease both}
-.hero-side{display:grid;gap:20px;justify-items:center;animation:fadeUp 1s .15s ease both}
+    .panel-kicker {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--blue)
+    }
 
-.seal{
-  display:grid;place-items:center;width:130px;height:130px;
-  border:4px dashed var(--gold);border-radius:50%;
-  color:var(--gold);font:900 3rem/1 "Nunito",sans-serif;
-  animation:gentleFloat 4s ease-in-out infinite;
-}
-.seal span{margin-top:-18px;font-size:.62rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    /* Kartu dasar */
+    .panel {
+      background: var(--card);
+      border: 2px solid #e5f4fc;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
 
-.hero-card{
-  width:100%;max-width:300px;padding:22px;text-align:center;
-  border:1px solid rgba(255,255,255,.3);border-radius:28px;
-  background:rgba(255,255,255,.17);backdrop-filter:blur(10px);
-}
-.hero-card small{display:block;font-weight:800;letter-spacing:.2em;color:var(--gold)}
-.hero-card strong{display:block;font-size:1.6rem;font-weight:900}
-.hero-card span{font-size:.85rem;opacity:.9}
+    .panel:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover)
+    }
 
-.quick-facts{
-  position:relative;z-index:2;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
-  margin-top:-36px;
-}
-.quick-facts article{
-  display:flex;align-items:center;gap:14px;padding:20px;
-  background:#fff;border:2px solid #e4f4ff;border-radius:22px;
-  box-shadow:var(--shadow);transition:.3s ease;
-  animation:fadeUp .7s ease both;
-}
-.quick-facts article:nth-child(2){animation-delay:.12s}
-.quick-facts article:nth-child(3){animation-delay:.24s}
-.quick-facts article:hover{transform:translateY(-7px);box-shadow:var(--shadow-hover)}
-.quick-facts strong{display:block;color:var(--blue-dark)}
-.quick-facts small{color:var(--muted)}
+    .panel h3 {
+      margin-bottom: 12px
+    }
 
-.fact-icon,.activity-icon{
-  display:grid;place-items:center;flex-shrink:0;
-  background:var(--gold);color:var(--blue-dark);
-  border-radius:15px;font-weight:900;
-}
-.fact-icon{width:44px;height:44px}
-.activity-icon{width:52px;height:52px;margin-bottom:14px;font-size:1.5rem}
+    /* Tombol */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
 
-/* ---------- 6. Visi misi, kelas, kegiatan ---------- */
-.vision-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:20px}
-.panel.vision,.class-card.featured{
-  color:#fff;border-color:#64c9ec;
-  background:linear-gradient(145deg,#075477,#0798c8);
-}
-.panel.vision .panel-kicker{color:var(--gold)}
-.panel.vision h3,.class-card.featured h3{color:#fff}
-.panel.vision h3{font-size:1.5rem}
-.mission-list{display:grid;gap:10px}
-.mission-list li::marker{color:var(--gold-dark);font-weight:800}
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, .14)
+    }
 
-.class-grid,.activity-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.class-card{
-  padding:28px;background:var(--card);
-  border:2px solid #e5f4fc;border-radius:var(--radius);
-  box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease;
-}
-.class-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
-.class-number{font-size:2.4rem;font-weight:900;color:var(--blue);opacity:.85}
-.class-card.featured .class-number{color:var(--gold)}
-.class-card .age{
-  display:inline-block;margin:6px 0 14px;padding:4px 12px;
-  border-radius:999px;background:var(--gold-soft);color:var(--blue-dark);
-  font-size:.85rem;font-weight:800;
-}
-.class-card p + p{margin-top:10px}
-.activity-grid ul{display:grid;gap:8px}
+    .button-primary {
+      background: var(--gold);
+      color: var(--blue-dark)
+    }
 
-/* ---------- 7. Galeri & Instagram ---------- */
-.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.gallery-item{
-  position:relative;margin:0;overflow:hidden;
-  display:flex;flex-direction:column;
-  background:#fff;border:2px solid #d9f1ff;border-radius:var(--radius);
-  box-shadow:0 8px 22px rgba(8,126,174,.09);
-  transition:transform .3s ease,box-shadow .3s ease;
-}
-.gallery-item:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
-.gallery-item.full{grid-column:1 / -1}
-.gallery-item video,.gallery-item img{display:block;width:100%}
-.gallery-item video{height:300px;object-fit:cover;object-position:center;background:#062b3a}
-.gallery-item img{aspect-ratio:16/10}
-/* Mode layar penuh: tampilkan video utuh, tidak terpotong */
-.gallery-item video:fullscreen{width:100%;height:100%;object-fit:cover;background:#000}
-.gallery-item video:-webkit-full-screen{width:100%;height:100%;object-fit:contain;background:#000}
-.gallery-item img{object-fit:cover;transition:transform .5s ease}
-.gallery-item.full img{aspect-ratio:21/9}
-.gallery-item.has-image{cursor:zoom-in}
-.gallery-item.has-image:hover img{transform:scale(1.05)}
-.gallery-item figcaption{
-  padding:13px;text-align:center;font-weight:800;color:var(--blue-dark);background:#fff;
-}
+    .button-primary:hover {
+      background: #ffe477
+    }
 
-.lightbox{
-  position:fixed;inset:0;z-index:200;display:none;
-  align-items:center;justify-content:center;flex-direction:column;
-  padding:24px;background:rgba(12,24,42,.92);
-}
-.lightbox.open{display:flex}
-.lightbox img{max-width:min(960px,100%);max-height:80vh;border-radius:16px}
-.lightbox p{margin-top:12px;font-weight:700;text-align:center;color:#fff}
-.lightbox button{
-  position:absolute;top:16px;right:20px;
-  border:0;background:transparent;color:#fff;font-size:2.2rem;cursor:pointer;
-}
+    .button-ghost {
+      border-color: rgba(255, 255, 255, .7);
+      color: #fff
+    }
 
-.instagram-section{padding:24px 0 72px}
-.instagram-content{
-  max-width:750px;margin:auto;padding:40px 25px;text-align:center;
-  background:rgba(255,255,255,.85);
-  border:2px solid #fff;border-radius:30px;
-  box-shadow:0 12px 30px rgba(0,100,150,.12);
-}
-.instagram-content h2{margin:14px 0;font-size:clamp(1.4rem,4vw,2.1rem);color:var(--blue-text)}
-.instagram-content p{margin-bottom:25px;color:#527386}
-.instagram-button{
-  display:inline-flex;align-items:center;gap:10px;padding:14px 25px;
-  border-radius:50px;background:var(--blue);color:#fff;font-weight:800;
-  box-shadow:0 7px 18px rgba(8,126,174,.25);transition:.3s ease;
-}
-.instagram-button:hover{background:#05658e;transform:translateY(-4px)}
-.instagram-button svg{width:20px;height:20px;fill:currentColor}
-.instagram-decoration{margin-top:25px;font-size:25px;animation:gentleFloat 3s ease-in-out infinite}
+    .button-light {
+      background: #fff;
+      color: var(--blue-dark)
+    }
 
-/* ---------- 8. Testimoni ---------- */
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.testi-card{
-  display:flex;flex-direction:column;gap:18px;margin:0;padding:28px;
-  background:linear-gradient(145deg,#fff,#f3fbff);
-  border:2px solid #e5f4fc;border-radius:var(--radius);
-  box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease;
-}
-.testi-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
-.testi-card blockquote{position:relative;padding-top:30px;font-size:1.02rem}
-.testi-card blockquote::before{
-  content:"\201C";position:absolute;top:-6px;left:-2px;
-  font:900 3.6rem/1 Georgia,serif;color:var(--gold);
-}
-.testi-card blockquote p + p{margin-top:8px}
-.testi-card figcaption{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
-.testi-card strong{display:block;color:var(--blue-dark)}
-.testi-card figcaption span{font-size:.85rem;color:var(--muted)}
+    .button-wa {
+      width: 100%;
+      background: #1fa855;
+      color: #fff
+    }
 
-/* ---------- 9. Biaya & infaq ---------- */
-.fee-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.fee-row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
-.fee-row:last-child{border-bottom:0}
-.fee-row b{color:var(--blue-dark);white-space:nowrap}
+    .button-wa:hover {
+      background: #188a46
+    }
 
-.note-card{
-  margin-top:20px;
-  background:#d9f3ff;border:3px solid var(--gold);border-radius:26px;
-  box-shadow:0 12px 28px rgba(8,126,174,.18);
-}
-.note-card,.note-card *{color:var(--blue-text)}
-.note-card .panel-kicker{color:var(--gold-dark)}
-.note-card h4{margin:14px 0 4px}
-.note-card ol{margin-top:4px}
+    /* ---------- 3. Intro screen ---------- */
+    .intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: linear-gradient(145deg, #087eae 0%, #12a9d5 50%, #67d5ed 100%);
+      transition: opacity .9s ease, visibility .9s ease;
+    }
 
-.infak-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start}
-.infak-letter{background:linear-gradient(145deg,#fff9e8,#fff);border-color:#ffe49a}
-.infak-letter h3{font-size:1.15rem}
-.infak-letter p{margin-bottom:12px}
-.letter-meta{font-weight:700;color:var(--muted)}
-.letter-salam{font-style:italic;font-weight:700;color:var(--blue-dark)}
-.letter-sign{
-  display:grid;grid-template-columns:1fr 1fr;gap:16px;
-  margin-top:18px;padding:14px 0;
-  border-top:1px dashed var(--gold-dark);
-}
-.letter-sign small,.letter-sign strong,.letter-sign span{display:block}
-.letter-sign small{color:var(--muted)}
-.letter-sign strong{margin-top:2px;color:var(--blue-dark)}
-.letter-sign span{margin-top:28px;font-weight:700}
+    .intro-screen.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
 
-.infak-options{display:grid;gap:12px;margin:6px 0 22px}
-.infak-option{
-  position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:16px 18px;background:#fff;
-  border:2px solid var(--line);border-radius:17px;
-  font-weight:800;cursor:pointer;transition:.25s ease;
-}
-.infak-option input{position:absolute;opacity:0;pointer-events:none}
-.infak-option span:last-child{color:var(--gold-dark)}
-.infak-option:hover{border-color:var(--blue);transform:translateX(4px)}
-.infak-option:has(input:checked){
-  border-color:var(--blue);background:var(--blue-soft);
-  box-shadow:0 0 0 3px rgba(8,126,174,.12);
-}
-.infak-option:focus-within{outline:3px solid var(--blue);outline-offset:2px}
+    .intro-content {
+      position: relative;
+      z-index: 3;
+      width: min(90%, 560px);
+      text-align: center;
+      color: #fff;
+      animation: appear 1.2s ease both;
+    }
 
-.infak-method{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}
-.infak-method label{
-  display:flex;align-items:center;gap:8px;padding:10px 16px;background:#fff;
-  border:2px solid var(--line);border-radius:999px;font-weight:700;cursor:pointer;
-}
-.infak-method label:has(input:checked){border-color:var(--blue);background:var(--blue-soft)}
+    .intro-logo {
+      width: 115px;
+      height: 115px;
+      margin: 0 auto 22px;
+      padding: 9px;
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 12px 35px rgba(0, 42, 90, .2);
+      animation: bounce 3s ease-in-out infinite;
+    }
 
-.bank-box{
-  display:none;margin-bottom:18px;padding:14px 16px;
-  border:1px dashed var(--gold-dark);border-radius:12px;background:var(--gold-soft);
-}
-.bank-box.show{display:block}
-.bank-box b{font-size:1.2rem;letter-spacing:.06em;color:var(--blue-dark)}
+    .intro-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain
+    }
 
-.field-label{display:block;margin-bottom:6px;font-weight:700}
-.text-input{
-  width:100%;margin-bottom:16px;padding:12px 14px;
-  border:2px solid var(--line);border-radius:12px;background:#fff;font:inherit;
-}
-.text-input:focus{outline:none;border-color:var(--blue)}
-.infak-form .muted{margin-top:14px;font-size:.9rem}
+    .intro-label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 4px
+    }
 
-/* ---------- 10. Pendaftaran, kontak, footer ---------- */
-.enroll-banner{
-  display:flex;align-items:center;justify-content:space-between;gap:24px;
-  margin-bottom:24px;padding:36px;color:#fff;
-  border:2px solid #61c9ed;border-radius:28px;
-  background:
-    radial-gradient(circle at 90% 10%,rgba(255,255,255,.15) 0 55px,transparent 56px),
-    linear-gradient(135deg,#075477,#0798c8);
-}
-.enroll-banner .eyebrow{color:var(--gold)}
-.enroll-banner h2{margin:8px 0 10px;color:#fff}
-.enroll-banner p{max-width:520px;opacity:.92}
+    .intro-content h1 {
+      margin-bottom: 15px;
+      color: #fff;
+      font-size: clamp(30px, 6vw, 48px);
+      text-shadow: 0 4px 0 rgba(0, 66, 110, .2);
+    }
 
-.enroll-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:start}
-.steps{display:grid;gap:10px;margin-bottom:22px}
-.steps li::marker{color:var(--gold-dark);font-weight:800}
-.requirements{padding-top:18px;border-top:1px dashed var(--line)}
-.requirements ul{display:grid;gap:6px;margin-top:8px}
+    .intro-content p {
+      max-width: 430px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #eafaff
+    }
 
-.form-panel iframe{display:block;width:100%;height:2254px;margin:16px 0;border:0}
-.wa-confirm{padding-top:20px;border-top:1px dashed var(--line)}
-.wa-confirm small{display:block;margin-top:10px;color:var(--muted)}
+    .intro-decoration {
+      margin: 22px 0;
+      font-size: 25px;
+      animation: bounce 3s ease-in-out infinite
+    }
 
-.registration-period{margin-top:20px}
-.registration-period p{margin-top:4px}
+    .intro-content small {
+      display: block;
+      margin-top: 22px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #e0f8ff
+    }
 
-.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.contact-wrap h2{margin:8px 0 12px;font-size:clamp(1.8rem,4vw,2.4rem);color:var(--blue-text)}
-.address{margin-top:16px;padding-left:14px;border-left:4px solid var(--gold);color:var(--muted)}
-.contact-list{display:grid;gap:12px}
-.contact-list a{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:16px 20px;background:var(--card);
-  border:2px solid #e5f4fc;border-radius:18px;
-  box-shadow:var(--shadow);transition:transform .25s ease,border-color .25s ease,background .25s ease;
-}
-.contact-list a:hover{transform:translateX(6px);border-color:var(--gold);background:#fffdf5}
-.contact-list span{font-weight:800;color:var(--blue-dark)}
-.contact-list b{color:var(--blue)}
+    #introButton {
+      border: 0;
+      padding: 15px 34px;
+      border-radius: 50px;
+      background: #ffd34f;
+      color: #064c79;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 7px 0 #dba82a;
+      transition: .25s ease;
+    }
 
-footer{
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
-  padding:28px max(24px,calc((100% - 1120px)/2));
-  color:rgba(255,255,255,.88);
-  background:linear-gradient(135deg,var(--blue-deep),var(--blue));
-  border-radius:35px 35px 0 0;
-}
-footer .brand strong{color:#fff}
-footer .brand small{color:rgba(255,255,255,.75)}
-footer p{font-size:.85rem}
+    #introButton:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 11px 0 #dba82a
+    }
 
-/* ---------- Animasi ---------- */
-@keyframes appear{from{opacity:0;transform:translateY(30px) scale(.95)}to{opacity:1;transform:none}}
-@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes gentleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-22px) rotate(8deg)}}
-@keyframes swim{to{transform:translateX(115vw)}}
-@keyframes swim-reverse{from{transform:scaleX(-1)}to{transform:translateX(-115vw) scaleX(-1)}}
-@keyframes bubble{from{transform:translateY(0);opacity:0}20%{opacity:.8}to{transform:translateY(-110vh);opacity:0}}
-@keyframes twinkle{0%,100%{transform:scale(.8) rotate(0)}50%{transform:scale(1.3) rotate(20deg)}}
-@keyframes patternMove{to{background-position:100px 100px}}
+    #introButton:active {
+      transform: translateY(3px);
+      box-shadow: 0 3px 0 #dba82a
+    }
 
-/* ---------- 11. Responsif & aksesibilitas ---------- */
-@media (max-width:900px){
-  .hero,.vision-grid,.enroll-grid,.contact-wrap,.fee-grid,.infak-grid{grid-template-columns:1fr}
-  .class-grid,.activity-grid,.quick-facts{grid-template-columns:1fr}
-  .quick-facts{margin-top:24px}
-  .enroll-banner{flex-direction:column;align-items:flex-start}
-  .hero{padding-block:56px}
-}
+    #introButton span {
+      display: inline-block;
+      margin-left: 8px;
+      transition: transform .25s ease
+    }
 
-@media (max-width:760px){
-  .site-header{padding:10px 16px}
-  .menu-toggle{display:block}
-  #mainNav{
-    display:none;position:absolute;top:100%;left:0;right:0;
-    flex-direction:column;align-items:stretch;
-    padding:12px 16px 18px;background:#fff;border-bottom:1px solid var(--line);
-  }
-  #mainNav.open{display:flex}
-  #mainNav a{text-align:center}
+    #introButton:hover span {
+      transform: translateX(5px)
+    }
 
-  .section{padding:52px 0}
-  .hero{padding:55px 22px;border-radius:0 0 32px 32px}
-  .hero h1{font-size:2.25rem}
-  .gallery-grid{grid-template-columns:1fr}
-  .gallery-item.full img{aspect-ratio:16/10}
-  .gallery-item video{height:260px}
-  .note-card{padding:20px}
-  .letter-sign{grid-template-columns:1fr}
-}
+    .intro-animals span {
+      position: absolute;
+      z-index: 2;
+      font-size: 42px;
+      user-select: none
+    }
 
-@media (max-width:600px){
-  .intro-logo{width:90px;height:90px;border-radius:24px}
-  .intro-content p{padding:0 10px;font-size:14px}
-  .intro-animals span{font-size:28px}
-  .intro-label{font-size:11px}
-}
+    .intro-fish {
+      top: 18%;
+      left: -70px;
+      animation: swim 17s linear infinite
+    }
 
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-    transition-duration:.01ms !important;
-    scroll-behavior:auto !important;
-  }
-}
+    .intro-dolphin {
+      top: 65%;
+      right: -80px;
+      animation: swim-reverse 20s linear infinite
+    }
+
+    .intro-turtle {
+      bottom: 13%;
+      left: 12%;
+      animation: float 4s ease-in-out infinite
+    }
+
+    .intro-octopus {
+      top: 15%;
+      right: 12%;
+      animation: float 5s ease-in-out infinite
+    }
+
+    .intro-star {
+      bottom: 20%;
+      right: 13%;
+      animation: twinkle 2s ease-in-out infinite
+    }
+
+    .intro-bubbles span {
+      position: absolute;
+      bottom: -50px;
+      font-size: 25px;
+      animation: bubble 12s linear infinite
+    }
+
+    .intro-bubbles span:nth-child(1) {
+      left: 10%
+    }
+
+    .intro-bubbles span:nth-child(2) {
+      left: 35%;
+      animation-delay: 3s
+    }
+
+    .intro-bubbles span:nth-child(3) {
+      left: 70%;
+      animation-delay: 5s
+    }
+
+    .intro-bubbles span:nth-child(4) {
+      left: 90%;
+      animation-delay: 1s
+    }
+
+    .intro-wave {
+      position: absolute;
+      left: -10%;
+      bottom: -100px;
+      width: 120%;
+      height: 180px;
+      border-radius: 45% 45% 0 0
+    }
+
+    .intro-wave-one {
+      background: rgba(255, 255, 255, .2);
+      transform: rotate(-4deg)
+    }
+
+    .intro-wave-two {
+      bottom: -125px;
+      background: rgba(255, 255, 255, .13);
+      transform: rotate(4deg)
+    }
+
+    /* ---------- 4. Header ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(16px);
+      border-bottom: 2px solid #e6f5ff;
+      box-shadow: 0 4px 20px rgba(8, 91, 130, .06);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .brand strong {
+      display: block;
+      font-size: .95rem;
+      font-weight: 900;
+      letter-spacing: .04em;
+      color: var(--blue-dark)
+    }
+
+    .brand small {
+      display: block;
+      font-size: .72rem;
+      color: var(--muted)
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 5px 14px rgba(8, 126, 174, .2);
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain
+    }
+
+    .menu-toggle {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    #mainNav {
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    #mainNav a {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: .92rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      transition: .25s ease;
+    }
+
+    #mainNav a:hover {
+      background: var(--blue-soft);
+      color: var(--blue);
+      transform: translateY(-2px)
+    }
+
+    #mainNav .nav-cta {
+      background: var(--gold);
+      font-weight: 800;
+      box-shadow: 0 5px 12px rgba(255, 212, 71, .3)
+    }
+
+    #mainNav .nav-cta:hover {
+      background: #ffe477;
+      color: var(--blue-dark)
+    }
+
+    /* ---------- 5. Hero & info singkat ---------- */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 32px;
+      align-items: center;
+      padding: 80px max(24px, calc((100% - 1120px)/2));
+      color: #fff;
+      border-radius: 0 0 55px 55px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(255, 255, 255, .16) 0 65px, transparent 66px),
+        radial-gradient(circle at 10% 90%, rgba(255, 212, 71, .18) 0 90px, transparent 91px),
+        linear-gradient(135deg, #075477, #0798c8 65%, #35bce4);
+    }
+
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .22;
+      background-image: radial-gradient(#fff 2px, transparent 2px);
+      background-size: 32px 32px;
+      animation: patternMove 25s linear infinite;
+    }
+
+    .hero .eyebrow {
+      color: var(--gold)
+    }
+
+    .hero h1 {
+      margin: 12px 0 16px;
+      color: #fff;
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      text-shadow: 0 3px 15px rgba(0, 0, 0, .08);
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-style: normal
+    }
+
+    .hero p {
+      max-width: 520px;
+      font-size: 1.05rem;
+      opacity: .94
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0 22px
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: .9rem;
+      font-weight: 800;
+      color: var(--gold)
+    }
+
+    .hero-content {
+      animation: fadeUp .8s ease both
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 20px;
+      justify-items: center;
+      animation: fadeUp 1s .15s ease both
+    }
+
+    .seal {
+      display: grid;
+      place-items: center;
+      width: 130px;
+      height: 130px;
+      border: 4px dashed var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+      font: 900 3rem/1 "Nunito", sans-serif;
+      animation: gentleFloat 4s ease-in-out infinite;
+    }
+
+    .seal span {
+      margin-top: -18px;
+      font-size: .62rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase
+    }
+
+    .hero-card {
+      width: 100%;
+      max-width: 300px;
+      padding: 22px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .17);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card small {
+      display: block;
+      font-weight: 800;
+      letter-spacing: .2em;
+      color: var(--gold)
+    }
+
+    .hero-card strong {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 900
+    }
+
+    .hero-card span {
+      font-size: .85rem;
+      opacity: .9
+    }
+
+    .quick-facts {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: -36px;
+    }
+
+    .quick-facts article {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #e4f4ff;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      transition: .3s ease;
+      animation: fadeUp .7s ease both;
+    }
+
+    .quick-facts article:nth-child(2) {
+      animation-delay: .12s
+    }
+
+    .quick-facts article:nth-child(3) {
+      animation-delay: .24s
+    }
+
+    .quick-facts article:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .quick-facts strong {
+      display: block;
+      color: var(--blue-dark)
+    }
+
+    .quick-facts small {
+      color: var(--muted)
+    }
+
+    .fact-icon,
+    .activity-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: var(--gold);
+      color: var(--blue-dark);
+      border-radius: 15px;
+      font-weight: 900;
+    }
+
+    .fact-icon {
+      width: 44px;
+      height: 44px
+    }
+
+    .activity-icon {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 14px;
+      font-size: 1.5rem
+    }
+
+    /* ---------- 6. Visi misi, kelas, kegiatan ---------- */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 20px
+    }
+
+    .panel.vision,
+    .class-card.featured {
+      color: #fff;
+      border-color: #64c9ec;
+      background: linear-gradient(145deg, #075477, #0798c8);
+    }
+
+    .panel.vision .panel-kicker {
+      color: var(--gold)
+    }
+
+    .panel.vision h3,
+    .class-card.featured h3 {
+      color: #fff
+    }
+
+    .panel.vision h3 {
+      font-size: 1.5rem
+    }
+
+    .mission-list {
+      display: grid;
+      gap: 10px
+    }
+
+    .mission-list li::marker {
+      color: var(--gold-dark);
+      font-weight: 800
+    }
+
+    .class-grid,
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .class-card {
+      padding: 28px;
+      background: var(--card);
+      border: 2px solid #e5f4fc;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .class-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .class-number {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--blue);
+      opacity: .85
+    }
+
+    .class-card.featured .class-number {
+      color: var(--gold)
+    }
+
+    .class-card .age {
+      display: inline-block;
+      margin: 6px 0 14px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--blue-dark);
+      font-size: .85rem;
+      font-weight: 800;
+    }
+
+    .class-card p+p {
+      margin-top: 10px
+    }
+
+    .activity-grid ul {
+      display: grid;
+      gap: 8px
+    }
+
+    /* ---------- 7. Galeri & Instagram ---------- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px
+    }
+
+    .gallery-item {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 2px solid #d9f1ff;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 22px rgba(8, 126, 174, .09);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .gallery-item.full {
+      grid-column: 1 / -1
+    }
+
+    .gallery-item video,
+    .gallery-item img {
+      display: block;
+      width: 100%
+    }
+
+    .gallery-item video {
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      background: #062b3a
+    }
+
+    .gallery-item img {
+      aspect-ratio: 16/10
+    }
+
+    /* Mode layar penuh: tampilkan video utuh, tidak terpotong */
+    .gallery-item video:fullscreen {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #000
+    }
+
+    .gallery-item video:-webkit-full-screen {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000
+    }
+
+    .gallery-item img {
+      object-fit: cover;
+      transition: transform .5s ease
+    }
+
+    .gallery-item.full img {
+      aspect-ratio: 21/9
+    }
+
+    .gallery-item.has-image {
+      cursor: zoom-in
+    }
+
+    .gallery-item.has-image:hover img {
+      transform: scale(1.05)
+    }
+
+    .gallery-item figcaption {
+      padding: 13px;
+      text-align: center;
+      font-weight: 800;
+      color: var(--blue-dark);
+      background: #fff;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 24px;
+      background: rgba(12, 24, 42, .92);
+    }
+
+    .lightbox.open {
+      display: flex
+    }
+
+    .lightbox img {
+      max-width: min(960px, 100%);
+      max-height: 80vh;
+      border-radius: 16px
+    }
+
+    .lightbox p {
+      margin-top: 12px;
+      font-weight: 700;
+      text-align: center;
+      color: #fff
+    }
+
+    .lightbox button {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      font-size: 2.2rem;
+      cursor: pointer;
+    }
+
+    .instagram-section {
+      padding: 24px 0 72px
+    }
+
+    .instagram-content {
+      max-width: 750px;
+      margin: auto;
+      padding: 40px 25px;
+      text-align: center;
+      background: rgba(255, 255, 255, .85);
+      border: 2px solid #fff;
+      border-radius: 30px;
+      box-shadow: 0 12px 30px rgba(0, 100, 150, .12);
+    }
+
+    .instagram-content h2 {
+      margin: 14px 0;
+      font-size: clamp(1.4rem, 4vw, 2.1rem);
+      color: var(--blue-text)
+    }
+
+    .instagram-content p {
+      margin-bottom: 25px;
+      color: #527386
+    }
+
+    .instagram-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 25px;
+      border-radius: 50px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 7px 18px rgba(8, 126, 174, .25);
+      transition: .3s ease;
+    }
+
+    .instagram-button:hover {
+      background: #05658e;
+      transform: translateY(-4px)
+    }
+
+    .instagram-button svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor
+    }
+
+    .instagram-decoration {
+      margin-top: 25px;
+      font-size: 25px;
+      animation: gentleFloat 3s ease-in-out infinite
+    }
+
+    /* ---------- 8. Testimoni ---------- */
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px
+    }
+
+    .testi-card {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 0;
+      padding: 28px;
+      background: linear-gradient(145deg, #fff, #f3fbff);
+      border: 2px solid #e5f4fc;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover)
+    }
+
+    .testi-card blockquote {
+      position: relative;
+      padding-top: 30px;
+      font-size: 1.02rem
+    }
+
+    .testi-card blockquote::before {
+      content: "\201C";
+      position: absolute;
+      top: -6px;
+      left: -2px;
+      font: 900 3.6rem/1 Georgia, serif;
+      color: var(--gold);
+    }
+
+    .testi-card blockquote p+p {
+      margin-top: 8px
+    }
+
+    .testi-card figcaption {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line)
+    }
+
+    .testi-card strong {
+      display: block;
+      color: var(--blue-dark)
+    }
+
+    .testi-card figcaption span {
+      font-size: .85rem;
+      color: var(--muted)
+    }
+
+    /* ---------- 9. Biaya & infaq ---------- */
+    .fee-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px
+    }
+
+    .fee-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--line)
+    }
+
+    .fee-row:last-child {
+      border-bottom: 0
+    }
+
+    .fee-row b {
+      color: var(--blue-dark);
+      white-space: nowrap
+    }
+
+    .note-card {
+      margin-top: 20px;
+      background: #d9f3ff;
+      border: 3px solid var(--gold);
+      border-radius: 26px;
+      box-shadow: 0 12px 28px rgba(8, 126, 174, .18);
+    }
+
+    .note-card,
+    .note-card * {
+      color: var(--blue-text)
+    }
+
+    .note-card .panel-kicker {
+      color: var(--gold-dark)
+    }
+
+    .note-card h4 {
+      margin: 14px 0 4px
+    }
+
+    .note-card ol {
+      margin-top: 4px
+    }
+
+    .infak-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+      align-items: start
+    }
+
+    .infak-letter {
+      background: linear-gradient(145deg, #fff9e8, #fff);
+      border-color: #ffe49a
+    }
+
+    .infak-letter h3 {
+      font-size: 1.15rem
+    }
+
+    .infak-letter p {
+      margin-bottom: 12px
+    }
+
+    .letter-meta {
+      font-weight: 700;
+      color: var(--muted)
+    }
+
+    .letter-salam {
+      font-style: italic;
+      font-weight: 700;
+      color: var(--blue-dark)
+    }
+
+    .letter-sign {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+      padding: 14px 0;
+      border-top: 1px dashed var(--gold-dark);
+    }
+
+    .letter-sign small,
+    .letter-sign strong,
+    .letter-sign span {
+      display: block
+    }
+
+    .letter-sign small {
+      color: var(--muted)
+    }
+
+    .letter-sign strong {
+      margin-top: 2px;
+      color: var(--blue-dark)
+    }
+
+    .letter-sign span {
+      margin-top: 28px;
+      font-weight: 700
+    }
+
+    .infak-options {
+      display: grid;
+      gap: 12px;
+      margin: 6px 0 22px
+    }
+
+    .infak-option {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 17px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .infak-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .infak-option span:last-child {
+      color: var(--gold-dark)
+    }
+
+    .infak-option:hover {
+      border-color: var(--blue);
+      transform: translateX(4px)
+    }
+
+    .infak-option:has(input:checked) {
+      border-color: var(--blue);
+      background: var(--blue-soft);
+      box-shadow: 0 0 0 3px rgba(8, 126, 174, .12);
+    }
+
+    .infak-option:focus-within {
+      outline: 3px solid var(--blue);
+      outline-offset: 2px
+    }
+
+    .infak-method {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px
+    }
+
+    .infak-method label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: #fff;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .infak-method label:has(input:checked) {
+      border-color: var(--blue);
+      background: var(--blue-soft)
+    }
+
+    .bank-box {
+      display: none;
+      margin-bottom: 18px;
+      padding: 14px 16px;
+      border: 1px dashed var(--gold-dark);
+      border-radius: 12px;
+      background: var(--gold-soft);
+    }
+
+    .bank-box.show {
+      display: block
+    }
+
+    .bank-box b {
+      font-size: 1.2rem;
+      letter-spacing: .06em;
+      color: var(--blue-dark)
+    }
+
+    .field-label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 700
+    }
+
+    .text-input {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      font: inherit;
+    }
+
+    .text-input:focus {
+      outline: none;
+      border-color: var(--blue)
+    }
+
+    .infak-form .muted {
+      margin-top: 14px;
+      font-size: .9rem
+    }
+
+    /* ---------- 10. Pendaftaran, kontak, footer ---------- */
+    .enroll-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+      padding: 36px;
+      color: #fff;
+      border: 2px solid #61c9ed;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(255, 255, 255, .15) 0 55px, transparent 56px),
+        linear-gradient(135deg, #075477, #0798c8);
+    }
+
+    .enroll-banner .eyebrow {
+      color: var(--gold)
+    }
+
+    .enroll-banner h2 {
+      margin: 8px 0 10px;
+      color: #fff
+    }
+
+    .enroll-banner p {
+      max-width: 520px;
+      opacity: .92
+    }
+
+    .enroll-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 20px;
+      align-items: start
+    }
+
+    .steps {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 22px
+    }
+
+    .steps li::marker {
+      color: var(--gold-dark);
+      font-weight: 800
+    }
+
+    .requirements {
+      padding-top: 18px;
+      border-top: 1px dashed var(--line)
+    }
+
+    .requirements ul {
+      display: grid;
+      gap: 6px;
+      margin-top: 8px
+    }
+
+    .form-panel iframe {
+      display: block;
+      width: 100%;
+      height: 2254px;
+      margin: 16px 0;
+      border: 0
+    }
+
+    .wa-confirm {
+      padding-top: 20px;
+      border-top: 1px dashed var(--line)
+    }
+
+    .wa-confirm small {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted)
+    }
+
+    .registration-period {
+      margin-top: 20px
+    }
+
+    .registration-period p {
+      margin-top: 4px
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start
+    }
+
+    .contact-wrap h2 {
+      margin: 8px 0 12px;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      color: var(--blue-text)
+    }
+
+    .address {
+      margin-top: 16px;
+      padding-left: 14px;
+      border-left: 4px solid var(--gold);
+      color: var(--muted)
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px
+    }
+
+    .contact-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 20px;
+      background: var(--card);
+      border: 2px solid #e5f4fc;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .contact-list a:hover {
+      transform: translateX(6px);
+      border-color: var(--gold);
+      background: #fffdf5
+    }
+
+    .contact-list span {
+      font-weight: 800;
+      color: var(--blue-dark)
+    }
+
+    .contact-list b {
+      color: var(--blue)
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 28px max(24px, calc((100% - 1120px)/2));
+      color: rgba(255, 255, 255, .88);
+      background: linear-gradient(135deg, var(--blue-deep), var(--blue));
+      border-radius: 35px 35px 0 0;
+    }
+
+    footer .brand strong {
+      color: #fff
+    }
+
+    footer .brand small {
+      color: rgba(255, 255, 255, .75)
+    }
+
+    footer p {
+      font-size: .85rem
+    }
+
+    /* ---------- Animasi ---------- */
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(.95)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    @keyframes gentleFloat {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-8deg)
+      }
+
+      50% {
+        transform: translateY(-22px) rotate(8deg)
+      }
+    }
+
+    @keyframes swim {
+      to {
+        transform: translateX(115vw)
+      }
+    }
+
+    @keyframes swim-reverse {
+      from {
+        transform: scaleX(-1)
+      }
+
+      to {
+        transform: translateX(-115vw) scaleX(-1)
+      }
+    }
+
+    @keyframes bubble {
+      from {
+        transform: translateY(0);
+        opacity: 0
+      }
+
+      20% {
+        opacity: .8
+      }
+
+      to {
+        transform: translateY(-110vh);
+        opacity: 0
+      }
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        transform: scale(.8) rotate(0)
+      }
+
+      50% {
+        transform: scale(1.3) rotate(20deg)
+      }
+    }
+
+    @keyframes patternMove {
+      to {
+        background-position: 100px 100px
+      }
+    }
+
+    /* ---------- 11. Responsif & aksesibilitas ---------- */
+    @media (max-width:900px) {
+
+      .hero,
+      .vision-grid,
+      .enroll-grid,
+      .contact-wrap,
+      .fee-grid,
+      .infak-grid {
+        grid-template-columns: 1fr
+      }
+
+      .class-grid,
+      .activity-grid,
+      .quick-facts {
+        grid-template-columns: 1fr
+      }
+
+      .quick-facts {
+        margin-top: 24px
+      }
+
+      .enroll-banner {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .hero {
+        padding-block: 56px
+      }
+    }
+
+    @media (max-width:760px) {
+      .site-header {
+        padding: 10px 16px
+      }
+
+      .menu-toggle {
+        display: block
+      }
+
+      #mainNav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 16px 18px;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+      }
+
+      #mainNav.open {
+        display: flex
+      }
+
+      #mainNav a {
+        text-align: center
+      }
+
+      .section {
+        padding: 52px 0
+      }
+
+      .hero {
+        padding: 55px 22px;
+        border-radius: 0 0 32px 32px
+      }
+
+      .hero h1 {
+        font-size: 2.25rem
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr
+      }
+
+      .gallery-item.full img {
+        aspect-ratio: 16/10
+      }
+
+      .gallery-item video {
+        height: 260px
+      }
+
+      .note-card {
+        padding: 20px
+      }
+
+      .letter-sign {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media (max-width:600px) {
+      .intro-logo {
+        width: 90px;
+        height: 90px;
+        border-radius: 24px
+      }
+
+      .intro-content p {
+        padding: 0 10px;
+        font-size: 14px
+      }
+
+      .intro-animals span {
+        font-size: 28px
+      }
+
+      .intro-label {
+        font-size: 11px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 
 <body class="locked">
 
-<!-- ================= INTRO ================= -->
-<div class="intro-screen" id="introScreen">
-  <div class="intro-bubbles" aria-hidden="true">
-    <span>🫧</span><span>🫧</span><span>🫧</span><span>🫧</span>
-  </div>
-
-  <div class="intro-animals" aria-hidden="true">
-    <span class="intro-fish">🐠</span>
-    <span class="intro-dolphin">🐬</span>
-    <span class="intro-turtle">🐢</span>
-    <span class="intro-octopus">🐙</span>
-    <span class="intro-star">⭐</span>
-  </div>
-
-  <div class="intro-content">
-    <div class="intro-logo">
-      <img src="images/logo.png" alt="Logo KB IT Al Furqon">
+  <!-- ================= INTRO ================= -->
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-bubbles" aria-hidden="true">
+      <span>🫧</span><span>🫧</span><span>🫧</span><span>🫧</span>
     </div>
 
-    <span class="intro-label">SELAMAT DATANG DI</span>
-    <h1>KB IT AL FURQON</h1>
-    <p>Tempat kecil untuk mimpi besar, belajar, bermain, dan tumbuh bersama!</p>
+    <div class="intro-animals" aria-hidden="true">
+      <span class="intro-fish">🐠</span>
+      <span class="intro-dolphin">🐬</span>
+      <span class="intro-turtle">🐢</span>
+      <span class="intro-octopus">🐙</span>
+      <span class="intro-star">⭐</span>
+    </div>
 
-    <div class="intro-decoration" aria-hidden="true">🌈 ⭐ 🐬 ⭐ 🌈</div>
-
-    <button type="button" id="introButton">Yuk, Mulai! <span aria-hidden="true">➜</span></button>
-
-    <small>Belajar • Bermain • Bertumbuh</small>
-  </div>
-
-  <div class="intro-wave intro-wave-one"></div>
-  <div class="intro-wave intro-wave-two"></div>
-</div>
-
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <a class="brand" href="#beranda">
-    <span class="brand-mark"><img src="images/logo.png" alt="Logo KB IT Al Furqon"></span>
-    <span>
-      <strong>KB IT AL FURQON</strong>
-      <small>Yayasan Al Furqon Pudakpayung</small>
-    </span>
-  </a>
-
-  <button class="menu-toggle" id="menuToggle" type="button"
-          aria-label="Buka menu" aria-expanded="false" aria-controls="mainNav">☰</button>
-
-  <nav id="mainNav" aria-label="Navigasi utama">
-    <a href="#profil">Profil</a>
-    <a href="#program">Program</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#biaya">Biaya</a>
-    <a href="#infak">Infaq</a>
-    <a href="#kontak">Kontak</a>
-    <a class="nav-cta" href="#pendaftaran">Daftar Sekarang</a>
-  </nav>
-</header>
-
-<main>
-
-  <!-- ================= HERO ================= -->
-  <section class="hero" id="beranda">
-    <div class="hero-pattern" aria-hidden="true"></div>
-
-    <div class="hero-content">
-      <span class="eyebrow">PENERIMAAN PESERTA DIDIK BARU</span>
-
-      <h1>Awali Langkah Baik<br><em>Generasi Rabbani</em></h1>
-
-      <p>KB IT Al Furqon — tempat tumbuhnya generasi yang beriman, bertakwa, cerdas, dan berkarakter.</p>
-
-      <div class="hero-actions">
-        <a class="button button-primary" href="#pendaftaran">Isi Formulir Pendaftaran <span aria-hidden="true">↗</span></a>
-        <a class="button button-ghost" href="#profil">Lihat Informasi</a>
+    <div class="intro-content">
+      <div class="intro-logo">
+        <img src="images/logo.png" alt="Logo KB IT Al Furqon">
       </div>
 
-      <div class="hero-meta">
-        <span>✦ Tahun Pelajaran 2027/2028</span>
-        <span>✦ Akreditasi B</span>
+      <span class="intro-label">SELAMAT DATANG DI</span>
+      <h1>KB IT AL FURQON</h1>
+      <p>Tempat kecil untuk mimpi besar, belajar, bermain, dan tumbuh bersama!</p>
+
+      <div class="intro-decoration" aria-hidden="true">🌈 ⭐ 🐬 ⭐ 🌈</div>
+
+      <button type="button" id="introButton">Yuk, Mulai! <span aria-hidden="true">➜</span></button>
+
+      <small>Belajar • Bermain • Bertumbuh</small>
+    </div>
+
+    <div class="intro-wave intro-wave-one"></div>
+    <div class="intro-wave intro-wave-two"></div>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <a class="brand" href="#beranda">
+      <span class="brand-mark"><img src="images/logo.png" alt="Logo KB IT Al Furqon"></span>
+      <span>
+        <strong>KB IT AL FURQON</strong>
+        <small>Yayasan Al Furqon Pudakpayung</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" aria-expanded="false"
+      aria-controls="mainNav">☰</button>
+
+    <nav id="mainNav" aria-label="Navigasi utama">
+      <a href="#profil">Profil</a>
+      <a href="#program">Program</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#biaya">Biaya</a>
+      <a href="#infak">Infaq</a>
+      <a href="#kontak">Kontak</a>
+      <a class="nav-cta" href="#pendaftaran">Daftar Sekarang</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="beranda">
+      <div class="hero-pattern" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <span class="eyebrow">PENERIMAAN PESERTA DIDIK BARU</span>
+
+        <h1>Awali Langkah Baik<br><em>Generasi Rabbani</em></h1>
+
+        <p>KB IT Al Furqon — tempat tumbuhnya generasi yang beriman, bertakwa, cerdas, dan berkarakter.</p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#pendaftaran">Isi Formulir Pendaftaran <span
+              aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="#profil">Lihat Informasi</a>
+        </div>
+
+        <div class="hero-meta">
+          <span>✦ Tahun Pelajaran 2027/2028</span>
+          <span>✦ Akreditasi B</span>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-side">
-      <div class="seal">B<span>Terakreditasi</span></div>
+      <div class="hero-side">
+        <div class="seal">B<span>Terakreditasi</span></div>
 
-      <div class="hero-card">
-        <small>KB IT</small>
-        <strong>AL FURQON</strong>
-        <span>Belajar • Beriman • Berakhlak</span>
+        <div class="hero-card">
+          <small>KB IT</small>
+          <strong>AL FURQON</strong>
+          <span>Belajar • Beriman • Berakhlak</span>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= INFO SINGKAT ================= -->
-  <section class="quick-facts wrap" aria-label="Informasi singkat">
-    <article>
-      <span class="fact-icon">01</span>
-      <div><strong>Usia 3–6 Tahun</strong><small>Tiga kelompok kelas</small></div>
-    </article>
-    <article>
-      <span class="fact-icon">02</span>
-      <div><strong>Senin–Jumat</strong><small>Jadwal sesuai kelompok</small></div>
-    </article>
-    <article>
-      <span class="fact-icon">03</span>
-      <div><strong>Pendidikan Qurani</strong><small>Pembiasaan sejak usia dini</small></div>
-    </article>
-  </section>
-
-  <!-- ================= PROFIL ================= -->
-  <section class="section wrap" id="profil">
-    <div class="section-heading">
-      <span class="eyebrow">MENGENAL KAMI</span>
-      <h2>Visi &amp; Misi</h2>
-      <p>Berikhtiar mendampingi tumbuh kembang anak dengan nilai keislaman dan pembelajaran sesuai tahap perkembangannya.</p>
-    </div>
-
-    <div class="vision-grid">
-      <article class="panel vision">
-        <span class="panel-kicker">VISI</span>
-        <h3>Terwujudnya generasi Rabbani Madani yang beriman, bertakwa, cerdas, berkarakter.</h3>
+    <!-- ================= INFO SINGKAT ================= -->
+    <section class="quick-facts wrap" aria-label="Informasi singkat">
+      <article>
+        <span class="fact-icon">01</span>
+        <div><strong>Usia 3–6 Tahun</strong><small>Tiga kelompok kelas</small></div>
       </article>
-
-      <article class="panel">
-        <span class="panel-kicker">MISI</span>
-        <ol class="mission-list">
-          <li>Membentuk pribadi yang berakhlak mulia.</li>
-          <li>Membentuk generasi Qurani sejak usia dini.</li>
-          <li>Menanamkan dasar-dasar aqidah sejak dini.</li>
-          <li>Menanamkan ketaatan beribadah sesuai Sunnah sejak dini.</li>
-          <li>Menanamkan akhlak Nabi Muhammad: menebar kebaikan, amanah, jujur, dan cerdas sejak usia dini.</li>
-          <li>Menstimulasi kemampuan dasar anak dalam penguasaan sains-teks sesuai tahap perkembangannya.</li>
-          <li>Mempersiapkan anak untuk melanjutkan pendidikan ke jenjang berikutnya.</li>
-        </ol>
+      <article>
+        <span class="fact-icon">02</span>
+        <div><strong>Senin–Jumat</strong><small>Jadwal sesuai kelompok</small></div>
       </article>
-    </div>
-  </section>
+      <article>
+        <span class="fact-icon">03</span>
+        <div><strong>Pendidikan Qurani</strong><small>Pembiasaan sejak usia dini</small></div>
+      </article>
+    </section>
 
-  <!-- ================= PROGRAM ================= -->
-  <section class="section section-soft" id="program">
-    <div class="wrap">
+    <!-- ================= PROFIL ================= -->
+    <section class="section wrap" id="profil">
       <div class="section-heading">
-        <span class="eyebrow">KELOMPOK BELAJAR</span>
-        <h2>Unit yang Dibuka</h2>
-        <p>Pilih kelompok kelas berdasarkan rentang usia calon peserta didik.</p>
+        <span class="eyebrow">MENGENAL KAMI</span>
+        <h2>Visi &amp; Misi</h2>
+        <p>Berikhtiar mendampingi tumbuh kembang anak dengan nilai keislaman dan pembelajaran sesuai tahap
+          perkembangannya.</p>
       </div>
 
-      <div class="class-grid">
-        <article class="class-card">
-          <span class="class-number">01</span>
-          <h3>Kelas Utsman</h3>
-          <p class="age">Usia 3–4 tahun</p>
-          <p><b>Senin–Kamis</b><br>07.30–10.00 WIB</p>
+      <div class="vision-grid">
+        <article class="panel vision">
+          <span class="panel-kicker">VISI</span>
+          <h3>Terwujudnya generasi Rabbani Madani yang beriman, bertakwa, cerdas, berkarakter.</h3>
         </article>
 
-        <article class="class-card featured">
-          <span class="class-number">02</span>
-          <h3>Kelas Ali</h3>
-          <p class="age">Usia 4–5 tahun</p>
-          <p><b>Senin–Kamis</b><br>07.30–10.30 WIB</p>
-          <p><b>Jumat</b><br>07.30–09.30 WIB</p>
-        </article>
-
-        <article class="class-card">
-          <span class="class-number">03</span>
-          <h3>Kelas Umar</h3>
-          <p class="age">Usia 5–6 tahun</p>
-          <p><b>Senin–Kamis</b><br>07.30–10.30 WIB</p>
-          <p><b>Jumat</b><br>07.30–09.30 WIB</p>
+        <article class="panel">
+          <span class="panel-kicker">MISI</span>
+          <ol class="mission-list">
+            <li>Membentuk pribadi yang berakhlak mulia.</li>
+            <li>Membentuk generasi Qurani sejak usia dini.</li>
+            <li>Menanamkan dasar-dasar aqidah sejak dini.</li>
+            <li>Menanamkan ketaatan beribadah sesuai Sunnah sejak dini.</li>
+            <li>Menanamkan akhlak Nabi Muhammad: menebar kebaikan, amanah, jujur, dan cerdas sejak usia dini.</li>
+            <li>Menstimulasi kemampuan dasar anak dalam penguasaan sains-teks sesuai tahap perkembangannya.</li>
+            <li>Mempersiapkan anak untuk melanjutkan pendidikan ke jenjang berikutnya.</li>
+          </ol>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= KEGIATAN ================= -->
-  <section class="section wrap" id="kegiatan">
-    <div class="section-heading">
-      <span class="eyebrow">PEMBELAJARAN</span>
-      <h2>Kegiatan Anak</h2>
-      <p>Kegiatan dirancang untuk mendukung pembiasaan, kemandirian, dan perkembangan anak.</p>
-    </div>
+    <!-- ================= PROGRAM ================= -->
+    <section class="section section-soft" id="program">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">KELOMPOK BELAJAR</span>
+          <h2>Unit yang Dibuka</h2>
+          <p>Pilih kelompok kelas berdasarkan rentang usia calon peserta didik.</p>
+        </div>
 
-    <div class="activity-grid">
-      <article class="panel">
-        <span class="activity-icon" aria-hidden="true">◷</span>
-        <h3>Bulanan</h3>
-        <ul>
-          <li>Renang 1 bulan sekali</li>
-          <li>Outing class 1 semester sekali</li>
-          <li>Kajian wali murid 1 bulan sekali</li>
-        </ul>
-      </article>
+        <div class="class-grid">
+          <article class="class-card">
+            <span class="class-number">01</span>
+            <h3>Kelas Utsman</h3>
+            <p class="age">Usia 3–4 tahun</p>
+            <p><b>Senin–Kamis</b><br>07.30–10.00 WIB</p>
+          </article>
 
-      <article class="panel">
-        <span class="activity-icon" aria-hidden="true">✦</span>
-        <h3>Pekanan</h3>
-        <ul>
-          <li>Jumat 1 &amp; 2: Arabic &amp; English language</li>
-          <li>Jumat 3: Praktik sholat</li>
-          <li>Jumat 4: Renang</li>
-        </ul>
-      </article>
+          <article class="class-card featured">
+            <span class="class-number">02</span>
+            <h3>Kelas Ali</h3>
+            <p class="age">Usia 4–5 tahun</p>
+            <p><b>Senin–Kamis</b><br>07.30–10.30 WIB</p>
+            <p><b>Jumat</b><br>07.30–09.30 WIB</p>
+          </article>
 
-      <article class="panel">
-        <span class="activity-icon" aria-hidden="true">☼</span>
-        <h3>Harian</h3>
-        <ul>
-          <li>Hafalan surat, doa harian, dan hadis pendek</li>
-          <li>Tahsin dengan metode Ummi</li>
-          <li>KBM sesuai kompetensi menurut usia</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- ================= GALERI ================= -->
-  <section class="section wrap" id="galeri">
-    <div class="section-heading">
-      <span class="eyebrow">GALERI</span>
-      <h2>Keseharian di Al Furqon</h2>
-      <p>Beberapa dokumentasi kegiatan belajar, ibadah, dan bermain anak-anak kami.</p>
-    </div>
-
-    <div class="gallery-grid">
-      <figure class="gallery-item">
-        <video controls playsinline preload="metadata" poster="images/renang.jpg">
-          <source src="videos/renang.mp4" type="video/mp4">
-          Browser Anda tidak mendukung video.
-        </video>
-        <figcaption>Renang bulanan</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <video controls playsinline preload="metadata" poster="images/outing.jpg">
-          <source src="videos/outing.mp4" type="video/mp4">
-          Browser Anda tidak mendukung video.
-        </video>
-        <figcaption>Outing class</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <video controls playsinline preload="metadata" poster="images/belajer.jpg">
-          <source src="videos/belajar.mp4" type="video/mp4">
-          Browser Anda tidak mendukung video.
-        </video>
-        <figcaption>Belajar di kelas</figcaption>
-      </figure>
-
-      <figure class="gallery-item">
-        <video controls playsinline preload="metadata" poster="images/bermain.jpg">
-          <source src="videos/bermain.mp4" type="video/mp4">
-          Browser Anda tidak mendukung video.
-        </video>
-        <figcaption>Bermain sambil belajar</figcaption>
-      </figure>
-
-      <figure class="gallery-item full has-image">
-        <img src="images/gedung.jpeg" alt="Gedung KB IT Al Furqon" loading="lazy">
-        <figcaption>Gedung sekolah</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ================= INSTAGRAM ================= -->
-  <section class="instagram-section">
-    <div class="wrap">
-      <div class="instagram-content">
-        <span class="eyebrow">IKUTI KAMI</span>
-        <h2>Keseruan Al Furqon Ada di Instagram! 📸</h2>
-        <p>Yuk, lihat lebih banyak kegiatan belajar, bermain, dan pengalaman seru anak-anak KB IT Al Furqon.</p>
-
-        <a class="instagram-button"
-           href="https://www.instagram.com/yayasanalfurqonpudakpayung/"
-           target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
-          Kunjungi Instagram Kami
-        </a>
-
-        <div class="instagram-decoration" aria-hidden="true">🌈 🐠 ⭐ 🐬</div>
+          <article class="class-card">
+            <span class="class-number">03</span>
+            <h3>Kelas Umar</h3>
+            <p class="age">Usia 5–6 tahun</p>
+            <p><b>Senin–Kamis</b><br>07.30–10.30 WIB</p>
+            <p><b>Jumat</b><br>07.30–09.30 WIB</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= TESTIMONI ================= -->
-  <section class="section section-soft" id="testimoni">
-    <div class="wrap">
+    <!-- ================= KEGIATAN ================= -->
+    <section class="section wrap" id="kegiatan">
       <div class="section-heading">
-        <span class="eyebrow">KATA WALI MURID</span>
-        <h2>Cerita dari Orang Tua</h2>
-        <p>Pengalaman wali murid yang putra-putrinya belajar di KB IT Al Furqon.</p>
+        <span class="eyebrow">PEMBELAJARAN</span>
+        <h2>Kegiatan Anak</h2>
+        <p>Kegiatan dirancang untuk mendukung pembiasaan, kemandirian, dan perkembangan anak.</p>
       </div>
 
-      <div class="testi-grid">
-        <figure class="testi-card">
-          <blockquote>
-            <p>Alhamdulillah dengan kemudahan dari Allah, Fahma semenjak sekolah di KBIT Al Furqon jadi lebih berani berinteraksi dengan orang lain. Di rumah juga seperti itu. Alhamdulillah belum ada 1 semester di kelas Ali (TK A) sudah bisa menyelesaikan buku Ummi jilid 1 dan buku Anak Islam Suka Membaca jilid 1. Sudah bisa penjumlahan 1–10, berhitung maju mundur 1–10. Untuk hafalan alhamdulillah lancar walaupun hafalannya belum banyak. Di rumah selalu semangat belajar.</p>
-            <p>Jazakumullah khoiron ustadzah. Semoga KBIT Al Furqon terus tumbuh dan melahirkan generasi Robbani yang berakhlak mulia. Aamiin.</p>
-          </blockquote>
-          <figcaption>
-            <strong>Ummu Fahma</strong>
-            <span>Wali dari Ananda Fahma</span>
-          </figcaption>
+      <div class="activity-grid">
+        <article class="panel">
+          <span class="activity-icon" aria-hidden="true">◷</span>
+          <h3>Bulanan</h3>
+          <ul>
+            <li>Renang 1 bulan sekali</li>
+            <li>Outing class 1 semester sekali</li>
+            <li>Kajian wali murid 1 bulan sekali</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <span class="activity-icon" aria-hidden="true">✦</span>
+          <h3>Pekanan</h3>
+          <ul>
+            <li>Jumat 1 &amp; 2: Arabic &amp; English language</li>
+            <li>Jumat 3: Praktik sholat</li>
+            <li>Jumat 4: Renang</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <span class="activity-icon" aria-hidden="true">☼</span>
+          <h3>Harian</h3>
+          <ul>
+            <li>Hafalan surat, doa harian, dan hadis pendek</li>
+            <li>Tahsin dengan metode Ummi</li>
+            <li>KBM sesuai kompetensi menurut usia</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= GALERI ================= -->
+    <section class="section wrap" id="galeri">
+      <div class="section-heading">
+        <span class="eyebrow">GALERI</span>
+        <h2>Keseharian di Al Furqon</h2>
+        <p>Beberapa dokumentasi kegiatan belajar, ibadah, dan bermain anak-anak kami.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <video controls playsinline preload="metadata" poster="images/renang.jpg">
+            <source src="videos/renang.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+          </video>
+          <figcaption>Renang bulanan</figcaption>
         </figure>
 
-        <!-- Tambah testimoni baru (dengan izin wali murid) dengan menyalin blok <figure> di atas. -->
+        <figure class="gallery-item">
+          <video controls playsinline preload="metadata" poster="images/outing.jpg">
+            <source src="videos/outing.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+          </video>
+          <figcaption>Outing class</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <video controls playsinline preload="metadata" poster="images/belajer.jpg">
+            <source src="videos/belajar.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+          </video>
+          <figcaption>Belajar di kelas</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <video controls playsinline preload="metadata" poster="images/bermain.jpg">
+            <source src="videos/bermain.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video.
+          </video>
+          <figcaption>Bermain sambil belajar</figcaption>
+        </figure>
+
+        <figure class="gallery-item full has-image">
+          <img src="images/gedung.jpeg" alt="Gedung KB IT Al Furqon" loading="lazy">
+          <figcaption>Gedung sekolah</figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ================= BIAYA ================= -->
-  <section class="section" id="biaya">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">INFORMASI BIAYA</span>
-        <h2>Biaya Pendidikan</h2>
-      </div>
+    <!-- ================= INSTAGRAM ================= -->
+    <section class="instagram-section">
+      <div class="wrap">
+        <div class="instagram-content">
+          <span class="eyebrow">IKUTI KAMI</span>
+          <h2>Keseruan Al Furqon Ada di Instagram! 📸</h2>
+          <p>Yuk, lihat lebih banyak kegiatan belajar, bermain, dan pengalaman seru anak-anak KB IT Al Furqon.</p>
 
-      <div class="fee-grid">
-        <article class="panel">
-          <h3>Kelas Utsman</h3>
-          <div class="fee-row"><span>Kain seragam</span><b>Rp75.000</b></div>
-          <div class="fee-row"><span>Seragam olahraga</span><b>Rp125.000</b></div>
-          <div class="fee-row"><span>Kerudung 2 stel</span><b>Rp80.000</b></div>
-          <div class="fee-row"><span>Uang paket sekolah</span><b>Rp750.000</b></div>
-          <div class="fee-row"><span>SPP / bulan</span><b>Rp150.000</b></div>
-          <div class="fee-row"><span>Snack / bulan</span><b>Rp50.000</b></div>
-        </article>
+          <a class="instagram-button" href="https://www.instagram.com/yayasanalfurqonpudakpayung/" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" />
+            </svg>
+            Kunjungi Instagram Kami
+          </a>
 
-        <article class="panel">
-          <h3>Kelas Ali &amp; Umar</h3>
-          <div class="fee-row"><span>Kain seragam</span><b>Rp150.000</b></div>
-          <div class="fee-row"><span>Seragam olahraga</span><b>Rp125.000</b></div>
-          <div class="fee-row"><span>Kerudung 3 stel</span><b>Rp120.000</b></div>
-          <div class="fee-row"><span>Uang paket sekolah</span><b>Rp900.000</b></div>
-          <div class="fee-row"><span>SPP / bulan</span><b>Rp155.000</b></div>
-          <div class="fee-row"><span>Snack / bulan</span><b>Rp60.000</b></div>
-        </article>
-      </div>
-
-      <article class="panel note-card">
-        <span class="panel-kicker">CATATAN</span>
-        <p>Uang paket sekolah digunakan untuk semua kegiatan dan perlengkapan sekolah:</p>
-
-        <h4>Perlengkapan sekolah</h4>
-        <p>Buku paket mengaji "Ummi", buku paket membaca "Anak Islam Suka Membaca", buku paket pembelajaran, crayon, pensil warna, pensil, penghapus, dan lain-lain.</p>
-
-        <h4>Kegiatan sekolah</h4>
-        <ol>
-          <li>Renang 1 bulan sekali</li>
-          <li>Outing class</li>
-        </ol>
-      </article>
-    </div>
-  </section>
-
-  <!-- ================= INFAQ ================= -->
-  <section class="section section-soft" id="infak">
-    <div class="wrap">
-      <div class="section-heading">
-        <span class="eyebrow">INFAQ GEDUNG</span>
-        <h2>Infaq</h2>
-        <p>Baca surat permohonan, pilih nominal infaq, lalu pilih cara pembayaran. Pembayaran Cash maupun Transfer dikonfirmasi melalui WhatsApp.</p>
-      </div>
-
-      <div class="infak-grid">
-
-        <!-- Surat permohonan -->
-        <article class="panel infak-letter">
-          <span class="panel-kicker">SURAT PERMOHONAN</span>
-          <h3>Kepada Calon Wali Murid KB IT Al Furqon</h3>
-          <p class="letter-meta">Hal: Infaq Gedung</p>
-
-          <p class="letter-salam">Assalamu'alaikum warahmatullahi wabarakatuh</p>
-
-          <p>Alhamdulillahirobbil 'alamin, sholawat serta salam semoga tetap terlimpah untuk Nabi Muhammad SAW, sahabatnya, keluarganya serta umatnya yang istiqomah di jalan-Nya dan semoga kita termasuk dalam golongannya. Amiin.</p>
-
-          <p>Dengan ini kami memberitahukan bahwa Alhamdulillah atas doa Bapak Ibu sekalian, Yayasan Al Furqon sudah memiliki gedung sendiri yang beralamat di Perum KORPRI Gg. XV No. 02. Program selanjutnya adalah pembangunan lantai 2 yang saat ini masih membutuhkan <b>Rp50.000.000,-</b></p>
-
-          <p>Atas doa, kerjasama dan bantuan yang diberikan kami ucapkan <i>jazakumullah khoiron katsiron</i>. Semoga Allah senantiasa melimpahkan rahmat dan keluasan rizqi serta menerima amal sholih kita dengan melipat gandakan pahalanya. Aamiin.</p>
-
-          <p class="letter-salam">Wassalamu'alaikum warahmatullahi wabarakatuh</p>
-
-          <div class="letter-sign">
-            <div>
-              <small>Mengetahui,</small>
-              <strong>Ketua Yayasan Al Furqon</strong>
-              <span>Nurzamroni, S.Si</span>
-            </div>
-            <div>
-              <small>Semarang, 15 November 2026</small>
-              <strong>Kepala KB IT Al Furqon</strong>
-              <span>Nurlaila Africha, S.Pd.I.</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Form infaq -->
-        <article class="panel infak-form">
-          <span class="panel-kicker">PILIH NOMINAL</span>
-
-          <div class="infak-options" role="radiogroup" aria-label="Nominal infaq">
-            <label class="infak-option">
-              <input type="radio" name="infakAmount" value="Rp750.000" checked>
-              <span>Rp750.000</span><span aria-hidden="true">✦</span>
-            </label>
-            <label class="infak-option">
-              <input type="radio" name="infakAmount" value="Rp1.000.000">
-              <span>Rp1.000.000</span><span aria-hidden="true">✦</span>
-            </label>
-            <label class="infak-option">
-              <input type="radio" name="infakAmount" value="Rp1.250.000">
-              <span>Rp1.250.000</span><span aria-hidden="true">✦</span>
-            </label>
-          </div>
-
-          <span class="panel-kicker">CARA PEMBAYARAN</span>
-
-          <div class="infak-method">
-            <label><input type="radio" name="infakMethod" value="Cash" checked> Cash</label>
-            <label><input type="radio" name="infakMethod" value="Transfer"> Transfer</label>
-          </div>
-
-          <div class="bank-box" id="bankBox">
-            <small>Rekening tujuan transfer</small><br>
-            <strong>Yayasan Al Furqon Pudakpayung</strong><br>
-            <b>1167902296</b>
-          </div>
-
-          <label class="field-label" for="infakChildName">Nama calon peserta didik</label>
-          <input class="text-input" id="infakChildName" type="text" placeholder="Masukkan nama anak" autocomplete="off">
-
-          <button class="button button-wa" id="infakWa" type="button">
-            Konfirmasi Infaq via WhatsApp <span aria-hidden="true">↗</span>
-          </button>
-
-          <p class="muted">Untuk Cash, pembayaran dilakukan langsung ke sekolah. Untuk Transfer, kirim bukti transfer melalui WhatsApp setelah tombol di atas ditekan.</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PENDAFTARAN ================= -->
-  <section class="section" id="pendaftaran">
-    <div class="wrap">
-
-      <div class="enroll-banner">
-        <div>
-          <span class="eyebrow">PENERIMAAN PESERTA DIDIK BARU</span>
-          <h2>Siap Bergabung dengan<br>KB IT Al Furqon?</h2>
-          <p>Isi formulir peserta didik melalui Google Forms. Setelah selesai, lakukan konfirmasi kepada sekolah melalui WhatsApp.</p>
+          <div class="instagram-decoration" aria-hidden="true">🌈 🐠 ⭐ 🐬</div>
         </div>
-        <a class="button button-light" href="#formArea">Isi Formulir <span aria-hidden="true">↗</span></a>
       </div>
+    </section>
 
-      <div class="enroll-grid">
+    <!-- ================= TESTIMONI ================= -->
+    <section class="section section-soft" id="testimoni">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">KATA WALI MURID</span>
+          <h2>Cerita dari Orang Tua</h2>
+          <p>Pengalaman wali murid yang putra-putrinya belajar di KB IT Al Furqon.</p>
+        </div>
 
-        <article class="panel">
-          <span class="panel-kicker">ALUR PENDAFTARAN</span>
+        <div class="testi-grid">
+          <figure class="testi-card">
+            <blockquote>
+              <p>Alhamdulillah dengan kemudahan dari Allah, Fahma semenjak sekolah di KBIT Al Furqon jadi lebih berani
+                berinteraksi dengan orang lain. Di rumah juga seperti itu. Alhamdulillah belum ada 1 semester di kelas
+                Ali (TK A) sudah bisa menyelesaikan buku Ummi jilid 1 dan buku Anak Islam Suka Membaca jilid 1. Sudah
+                bisa penjumlahan 1–10, berhitung maju mundur 1–10. Untuk hafalan alhamdulillah lancar walaupun
+                hafalannya belum banyak. Di rumah selalu semangat belajar.</p>
+              <p>Jazakumullah khoiron ustadzah. Semoga KBIT Al Furqon terus tumbuh dan melahirkan generasi Robbani yang
+                berakhlak mulia. Aamiin.</p>
+            </blockquote>
+            <figcaption>
+              <strong>Ummu Fahma</strong>
+              <span>Wali dari Ananda Fahma</span>
+            </figcaption>
+          </figure>
 
-          <ol class="steps">
-            <li>Baca informasi dan persyaratan pendaftaran.</li>
-            <li>Isi seluruh bagian Google Forms dengan data yang benar.</li>
-            <li>Periksa kembali jawaban sebelum mengirim formulir.</li>
-            <li>Setelah formulir terkirim, tekan tombol konfirmasi WhatsApp.</li>
-          </ol>
+          <!-- Tambah testimoni baru (dengan izin wali murid) dengan menyalin blok <figure> di atas. -->
+        </div>
+      </div>
+    </section>
 
-          <div class="requirements">
-            <h3>Syarat Pendaftaran</h3>
-            <ul>
-              <li>Membayar uang pendaftaran Rp150.000.</li>
-              <li>Infaq gedung (pilih nominal pada bagian Infaq).</li>
-              <li>Fotokopi akta kelahiran.</li>
-              <li>Fotokopi kartu keluarga.</li>
-              <li>Mengisi formulir pendaftaran.</li>
-              <li>Laki-laki dengan stempel biru.</li>
-              <li>Perempuan dengan stempel merah.</li>
-            </ul>
-          </div>
+    <!-- ================= BIAYA ================= -->
+    <section class="section" id="biaya">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">INFORMASI BIAYA</span>
+          <h2>Biaya Pendidikan</h2>
+        </div>
+
+        <div class="fee-grid">
+          <article class="panel">
+            <h3>Kelas Utsman</h3>
+            <div class="fee-row"><span>Kain seragam</span><b>Rp75.000</b></div>
+            <div class="fee-row"><span>Seragam olahraga</span><b>Rp125.000</b></div>
+            <div class="fee-row"><span>Kerudung 2 stel</span><b>Rp80.000</b></div>
+            <div class="fee-row"><span>Uang paket sekolah</span><b>Rp750.000</b></div>
+            <div class="fee-row"><span>SPP / bulan</span><b>Rp150.000</b></div>
+            <div class="fee-row"><span>Snack / bulan</span><b>Rp50.000</b></div>
+          </article>
+
+          <article class="panel">
+            <h3>Kelas Ali &amp; Umar</h3>
+            <div class="fee-row"><span>Kain seragam</span><b>Rp150.000</b></div>
+            <div class="fee-row"><span>Seragam olahraga</span><b>Rp125.000</b></div>
+            <div class="fee-row"><span>Kerudung 3 stel</span><b>Rp120.000</b></div>
+            <div class="fee-row"><span>Uang paket sekolah</span><b>Rp900.000</b></div>
+            <div class="fee-row"><span>SPP / bulan</span><b>Rp155.000</b></div>
+            <div class="fee-row"><span>Snack / bulan</span><b>Rp60.000</b></div>
+          </article>
+        </div>
+
+        <article class="panel note-card">
+          <span class="panel-kicker">CATATAN</span>
+          <p>Uang paket sekolah digunakan untuk semua kegiatan dan perlengkapan sekolah selama 1 tahun:</p>
+
+          <h4>Perlengkapan sekolah</h4>
+          <p>Buku paket mengaji "Ummi", buku paket membaca "Anak Islam Suka Membaca", buku paket pembelajaran, crayon,
+            pensil warna, pensil, penghapus, dan lain-lain.</p>
+
+          <h4>Kegiatan sekolah</h4>
+          <ol>
+            <li>Renang 1 bulan sekali</li>
+            <li>Outing class</li>
+          </ol><br>
+          <h5>"Bisa dicicil selama 1 semester"</h5>
         </article>
+      </div>
+    </section>
 
-        <article class="panel form-panel" id="formArea">
-          <span class="panel-kicker">FORMULIR PESERTA DIDIK</span>
-          <h3>Daftar secara online</h3>
-          <p class="muted">Isi formulir resmi di bawah ini sampai selesai, lalu kirim.</p>
+    <!-- ================= INFAQ ================= -->
+    <section class="section section-soft" id="infak">
+      <div class="wrap">
+        <div class="section-heading">
+          <span class="eyebrow">INFAQ GEDUNG</span>
+          <h2>Infaq</h2>
+          <p>Infaq gedung digunakan untuk pembangunan lantai 2 dan perbaikan gedung.
 
-          <iframe
-            title="Formulir Peserta Didik KB IT Al Furqon"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeyY8bOHWp_vffAbNI0XAiNEus89hbonHTKbOaRzCrVC4tX2g/viewform?embedded=true"
-            loading="lazy">Memuat…</iframe>
+            Infaq gedung dapat dibayar dengan dengan bertahap selama 1 tahunPilih nominal infaq, lalu pilih cara
+            pembayaran. Pembayaran Cash maupun Transfer dikonfirmasi melalui WhatsApp.</p>
+        </div>
 
-          <div class="wa-confirm">
-            <label class="field-label" for="childName">Nama calon peserta didik (untuk pesan konfirmasi)</label>
-            <input class="text-input" id="childName" type="text" placeholder="Masukkan nama anak" autocomplete="off">
+        <div class="infak-grid">
 
-            <button class="button button-wa" id="confirmWa" type="button">
-              Konfirmasi via WhatsApp <span aria-hidden="true">↗</span>
+          <!-- Surat permohonan -->
+          <article class="panel infak-letter">
+            <span class="panel-kicker"></span>
+            <h3>Kepada Calon Wali Murid KB IT Al Furqon</h3>
+            <p class="letter-meta">Hal: Infaq Gedung</p>
+
+            <p class="letter-salam">Assalamu'alaikum warahmatullahi wabarakatuh</p>
+
+            <p>Alhamdulillahirobbil 'alamin, sholawat serta salam semoga tetap terlimpah untuk Nabi Muhammad SAW,
+              sahabatnya, keluarganya serta umatnya yang istiqomah di jalan-Nya dan semoga kita termasuk dalam
+              golongannya. Amiin.</p>
+
+            <p>Dengan ini kami memberitahukan bahwa Alhamdulillah atas doa Bapak Ibu sekalian, Yayasan Al Furqon sudah
+              memiliki gedung sendiri yang beralamat di Perum KORPRI Gg. XV No. 02. Program selanjutnya adalah
+              pembangunan lantai 2 yang saat ini masih membutuhkan <b>Rp50.000.000,-</b></p>
+
+            <p>Atas doa, kerjasama dan bantuan yang diberikan kami ucapkan <i>jazakumullah khoiron katsiron</i>. Semoga
+              Allah senantiasa melimpahkan rahmat dan keluasan rizqi serta menerima amal sholih kita dengan melipat
+              gandakan pahalanya. Aamiin.</p>
+
+            <p class="letter-salam">Wassalamu'alaikum warahmatullahi wabarakatuh</p>
+
+            <div class="letter-sign">
+              <div>
+                <small>Mengetahui,</small>
+                <strong>Ketua Yayasan Al Furqon</strong>
+                <span>Nurzamroni, S.Si</span>
+              </div>
+              <div>
+                <small>Semarang, 15 November 2026</small>
+                <strong>Kepala KB IT Al Furqon</strong>
+                <span>Nurlaila Africha, S.Pd.I.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Form infaq -->
+          <article class="panel infak-form">
+            <span class="panel-kicker">PILIH NOMINAL</span>
+
+            <div class="infak-options" role="radiogroup" aria-label="Nominal infaq">
+              <label class="infak-option">
+                <input type="radio" name="infakAmount" value="Rp750.000" checked>
+                <span>Rp750.000</span><span aria-hidden="true">✦</span>
+              </label>
+              <label class="infak-option">
+                <input type="radio" name="infakAmount" value="Rp1.000.000">
+                <span>Rp1.000.000</span><span aria-hidden="true">✦</span>
+              </label>
+              <label class="infak-option">
+                <input type="radio" name="infakAmount" value="Rp1.250.000">
+                <span>Rp1.250.000</span><span aria-hidden="true">✦</span>
+              </label>
+            </div>
+
+            <span class="panel-kicker">CARA PEMBAYARAN</span>
+
+            <div class="infak-method">
+              <label><input type="radio" name="infakMethod" value="Cash" checked> Cash</label>
+              <label><input type="radio" name="infakMethod" value="Transfer"> Transfer</label>
+            </div>
+
+            <div class="bank-box" id="bankBox">
+              <small>Rekening tujuan transfer</small><br>
+              <strong>Yayasan Al Furqon Pudakpayung</strong><br>
+              <b>1167902296</b>
+            </div>
+
+            <label class="field-label" for="infakChildName">Nama calon peserta didik</label>
+            <input class="text-input" id="infakChildName" type="text" placeholder="Masukkan nama anak"
+              autocomplete="off">
+
+            <button class="button button-wa" id="infakWa" type="button">
+              Konfirmasi Infaq via WhatsApp <span aria-hidden="true">↗</span>
             </button>
 
-            <small>Tekan tombol ini setelah formulir Google Forms berhasil dikirim. WhatsApp akan terbuka dengan pesan yang siap dikirim.</small>
+            <p class="muted">Untuk Cash, pembayaran dilakukan langsung ke sekolah. Untuk Transfer, kirim bukti transfer
+              melalui WhatsApp setelah tombol di atas ditekan.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PENDAFTARAN ================= -->
+    <section class="section" id="pendaftaran">
+      <div class="wrap">
+
+        <div class="enroll-banner">
+          <div>
+            <span class="eyebrow">PENERIMAAN PESERTA DIDIK BARU</span>
+            <h2>Siap Bergabung dengan<br>KB IT Al Furqon?</h2>
+            <p>Isi formulir peserta didik melalui Google Forms. Setelah selesai, lakukan konfirmasi kepada sekolah
+              melalui WhatsApp.</p>
           </div>
-        </article>
+          <a class="button button-light" href="#formArea">Isi Formulir <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="enroll-grid">
+
+          <article class="panel">
+            <span class="panel-kicker">ALUR PENDAFTARAN</span>
+
+            <ol class="steps">
+              <li>Baca informasi dan persyaratan pendaftaran.</li>
+              <li>Isi seluruh bagian Google Forms dengan data yang benar.</li>
+              <li>Periksa kembali jawaban sebelum mengirim formulir.</li>
+              <li>Setelah formulir terkirim, tekan tombol konfirmasi WhatsApp.</li>
+            </ol>
+
+            <div class="requirements">
+              <h3>Syarat Pendaftaran</h3>
+              <ul>
+                <li>Membayar uang pendaftaran Rp150.000.</li>
+                <li>Infaq gedung (pilih nominal pada bagian Infaq).</li>
+                <li>Fotokopi akta kelahiran.</li>
+                <li>Fotokopi kartu keluarga.</li>
+                <li>Mengisi formulir pendaftaran.</li>
+                <li>Laki-laki dengan stempel biru.</li>
+                <li>Perempuan dengan stempel merah.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="panel form-panel" id="formArea">
+            <span class="panel-kicker">FORMULIR PESERTA DIDIK</span>
+            <h3>Daftar secara online</h3>
+            <p class="muted">Isi formulir resmi di bawah ini sampai selesai, lalu kirim.</p>
+
+            <iframe title="Formulir Peserta Didik KB IT Al Furqon"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSeyY8bOHWp_vffAbNI0XAiNEus89hbonHTKbOaRzCrVC4tX2g/viewform?embedded=true"
+              loading="lazy">Memuat…</iframe>
+
+            <div class="wa-confirm">
+              <label class="field-label" for="childName">Nama calon peserta didik (untuk pesan konfirmasi)</label>
+              <input class="text-input" id="childName" type="text" placeholder="Masukkan nama anak" autocomplete="off">
+
+              <button class="button button-wa" id="confirmWa" type="button">
+                Konfirmasi via WhatsApp <span aria-hidden="true">↗</span>
+              </button>
+
+              <small>Tekan tombol ini setelah formulir Google Forms berhasil dikirim. WhatsApp akan terbuka dengan pesan
+                yang siap dikirim.</small>
+            </div>
+          </article>
+
+        </div>
+
 
       </div>
+    </section>
 
+    <!-- ================= KONTAK ================= -->
+    <section class="section section-soft" id="kontak">
+      <div class="wrap contact-wrap">
 
-    </div>
-  </section>
+        <div>
+          <span class="eyebrow">HUBUNGI KAMI</span>
+          <h2>Kami siap membantu</h2>
+          <p>Silakan hubungi narahubung untuk informasi jadwal, biaya, dan proses pendaftaran.</p>
+          <p class="address">Perum KORPRI, Jl. Payung Prasetya Gg. XV No. 02, Pudakpayung, Banyumanik, Semarang.</p>
+        </div>
 
-  <!-- ================= KONTAK ================= -->
-  <section class="section section-soft" id="kontak">
-    <div class="wrap contact-wrap">
+        <div class="contact-list">
+          <a href="https://wa.me/6285713933987" target="_blank" rel="noopener">
+            <span>Usth Ella</span><b>0857-1393-3987 ↗</b>
+          </a>
+          <a href="https://wa.me/6281914460007" target="_blank" rel="noopener">
+            <span>Usth Nita</span><b>0819-1446-0007 ↗</b>
+          </a>
+          <a href="https://wa.me/62895336810889" target="_blank" rel="noopener">
+            <span>Usth Een</span><b>0895-3368-10889 ↗</b>
+          </a>
+          <a href="https://wa.me/6285226022081" target="_blank" rel="noopener">
+            <span>Usth Alya</span><b>0852-2602-2081 ↗</b>
+          </a>
+        </div>
 
-      <div>
-        <span class="eyebrow">HUBUNGI KAMI</span>
-        <h2>Kami siap membantu</h2>
-        <p>Silakan hubungi narahubung untuk informasi jadwal, biaya, dan proses pendaftaran.</p>
-        <p class="address">Perum KORPRI, Jl. Payung Prasetya Gg. XV No. 02, Pudakpayung, Banyumanik, Semarang.</p>
       </div>
+    </section>
 
-      <div class="contact-list">
-        <a href="https://wa.me/6285713933987" target="_blank" rel="noopener">
-          <span>Usth Ella</span><b>0857-1393-3987 ↗</b>
-        </a>
-        <a href="https://wa.me/6281914460007" target="_blank" rel="noopener">
-          <span>Usth Nita</span><b>0819-1446-0007 ↗</b>
-        </a>
-        <a href="https://wa.me/62895336810889" target="_blank" rel="noopener">
-          <span>Usth Een</span><b>0895-3368-10889 ↗</b>
-        </a>
-        <a href="https://wa.me/6285226022081" target="_blank" rel="noopener">
-          <span>Usth Alya</span><b>0852-2602-2081 ↗</b>
-        </a>
-      </div>
+  </main>
 
-    </div>
-  </section>
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <a class="brand" href="#beranda">
+      <span class="brand-mark"><img src="images/logo.png" alt="Logo KB IT Al Furqon"></span>
+      <span>
+        <strong>KB IT AL FURQON</strong>
+        <small>Yayasan Al Furqon Pudakpayung</small>
+      </span>
+    </a>
 
-</main>
+    <p>© <span id="year"></span> KB IT Al Furqon. Informasi pendaftaran peserta didik baru.</p>
+  </footer>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-  <a class="brand" href="#beranda">
-    <span class="brand-mark"><img src="images/logo.png" alt="Logo KB IT Al Furqon"></span>
-    <span>
-      <strong>KB IT AL FURQON</strong>
-      <small>Yayasan Al Furqon Pudakpayung</small>
-    </span>
-  </a>
+  <script>
+    (function () {
+      "use strict";
 
-  <p>© <span id="year"></span> KB IT Al Furqon. Informasi pendaftaran peserta didik baru.</p>
-</footer>
+      var WA_NUMBER = "6285713933987"; // Usth Ella (format internasional tanpa +)
 
-<script>
-(function () {
-  "use strict";
+      function $(id) { return document.getElementById(id); }
 
-  var WA_NUMBER = "6285713933987"; // Usth Ella (format internasional tanpa +)
-
-  function $(id) { return document.getElementById(id); }
-
-  function selected(name) {
-    var el = document.querySelector('input[name="' + name + '"]:checked');
-    return el ? el.value : "";
-  }
-
-  function openWa(message) {
-    window.open(
-      "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(message),
-      "_blank",
-      "noopener"
-    );
-  }
-
-  // Validasi nama anak, kembalikan nama atau null
-  function requireName(input) {
-    var nama = input ? input.value.trim() : "";
-    if (!nama) {
-      alert("Mohon isi nama calon peserta didik terlebih dahulu.");
-      if (input) input.focus();
-      return null;
-    }
-    return nama;
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-
-    /* ---------- Intro ---------- */
-    var intro = $("introScreen");
-    var introButton = $("introButton");
-
-    function closeIntro() {
-      if (!intro) return;
-      intro.classList.add("hide");
-      document.body.classList.remove("locked");
-      setTimeout(function () {
-        if (intro) { intro.remove(); intro = null; }
-      }, 1000);
-    }
-
-    if (intro && introButton) {
-      introButton.addEventListener("click", closeIntro);
-    } else {
-      document.body.classList.remove("locked");
-    }
-
-    /* ---------- Tahun footer ---------- */
-    var year = $("year");
-    if (year) year.textContent = new Date().getFullYear();
-
-    /* ---------- Menu mobile ---------- */
-    var toggle = $("menuToggle");
-    var nav = $("mainNav");
-
-    if (toggle && nav) {
-      function setMenu(open) {
-        nav.classList.toggle("open", open);
-        toggle.setAttribute("aria-expanded", String(open));
-        toggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+      function selected(name) {
+        var el = document.querySelector('input[name="' + name + '"]:checked');
+        return el ? el.value : "";
       }
-      toggle.addEventListener("click", function () {
-        setMenu(!nav.classList.contains("open"));
-      });
-      nav.addEventListener("click", function (e) {
-        if (e.target.closest("a")) setMenu(false);
-      });
-    }
 
-    /* ---------- Konfirmasi pendaftaran ---------- */
-    var confirmBtn = $("confirmWa");
-    if (confirmBtn) {
-      confirmBtn.addEventListener("click", function () {
-        var nama = requireName($("childName"));
-        if (!nama) return;
-        openWa(
-          "Assalamu'alaikum, saya telah mengisi formulir pendaftaran KB IT Al Furqon.\n" +
-          "Nama calon peserta didik: " + nama + "\n" +
-          "Mohon konfirmasinya. Jazakumullahu khairan."
+      function openWa(message) {
+        window.open(
+          "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(message),
+          "_blank",
+          "noopener"
         );
-      });
-    }
-
-    /* ---------- Infaq ---------- */
-    var bankBox = $("bankBox");
-
-    function toggleBank() {
-      if (bankBox) bankBox.classList.toggle("show", selected("infakMethod") === "Transfer");
-    }
-    document.querySelectorAll('input[name="infakMethod"]').forEach(function (r) {
-      r.addEventListener("change", toggleBank);
-    });
-    toggleBank();
-
-    var infakBtn = $("infakWa");
-    if (infakBtn) {
-      infakBtn.addEventListener("click", function () {
-        var nama = requireName($("infakChildName"));
-        if (!nama) return;
-
-        var method = selected("infakMethod");
-        var msg =
-          "Assalamu'alaikum, saya ingin konfirmasi infaq gedung KB IT Al Furqon.\n" +
-          "Nama calon peserta didik: " + nama + "\n" +
-          "Nominal infaq: " + selected("infakAmount") + "\n" +
-          "Cara pembayaran: " + method;
-
-        if (method === "Transfer") {
-          msg += "\nRekening tujuan: Yayasan Al Furqon Pudakpayung - 1167902296" +
-                 "\nBukti transfer akan saya kirim di chat ini.";
-        }
-        openWa(msg);
-      });
-    }
-
-    /* ---------- Lightbox galeri (khusus foto) ---------- */
-    var photos = document.querySelectorAll(".gallery-item.has-image");
-    if (photos.length) {
-      var box = document.createElement("div");
-      box.className = "lightbox";
-      box.setAttribute("role", "dialog");
-      box.setAttribute("aria-modal", "true");
-      box.innerHTML =
-        '<button type="button" aria-label="Tutup">×</button>' +
-        '<img alt=""><p></p>';
-      document.body.appendChild(box);
-
-      var boxImg = box.querySelector("img");
-      var boxCap = box.querySelector("p");
-
-      function closeBox() {
-        box.classList.remove("open");
-        boxImg.removeAttribute("src");
       }
 
-      box.addEventListener("click", closeBox);
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") closeBox();
-      });
+      // Validasi nama anak, kembalikan nama atau null
+      function requireName(input) {
+        var nama = input ? input.value.trim() : "";
+        if (!nama) {
+          alert("Mohon isi nama calon peserta didik terlebih dahulu.");
+          if (input) input.focus();
+          return null;
+        }
+        return nama;
+      }
 
-      photos.forEach(function (item) {
-        var img = item.querySelector("img");
-        if (!img) return;
+      document.addEventListener("DOMContentLoaded", function () {
 
-        img.addEventListener("error", function () {
-          item.hidden = true; // sembunyikan jika file foto belum ada
+        /* ---------- Intro ---------- */
+        var intro = $("introScreen");
+        var introButton = $("introButton");
+
+        function closeIntro() {
+          if (!intro) return;
+          intro.classList.add("hide");
+          document.body.classList.remove("locked");
+          setTimeout(function () {
+            if (intro) { intro.remove(); intro = null; }
+          }, 1000);
+        }
+
+        if (intro && introButton) {
+          introButton.addEventListener("click", closeIntro);
+        } else {
+          document.body.classList.remove("locked");
+        }
+
+        /* ---------- Tahun footer ---------- */
+        var year = $("year");
+        if (year) year.textContent = new Date().getFullYear();
+
+        /* ---------- Menu mobile ---------- */
+        var toggle = $("menuToggle");
+        var nav = $("mainNav");
+
+        if (toggle && nav) {
+          function setMenu(open) {
+            nav.classList.toggle("open", open);
+            toggle.setAttribute("aria-expanded", String(open));
+            toggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+          }
+          toggle.addEventListener("click", function () {
+            setMenu(!nav.classList.contains("open"));
+          });
+          nav.addEventListener("click", function (e) {
+            if (e.target.closest("a")) setMenu(false);
+          });
+        }
+
+        /* ---------- Konfirmasi pendaftaran ---------- */
+        var confirmBtn = $("confirmWa");
+        if (confirmBtn) {
+          confirmBtn.addEventListener("click", function () {
+            var nama = requireName($("childName"));
+            if (!nama) return;
+            openWa(
+              "Assalamu'alaikum, saya telah mengisi formulir pendaftaran KB IT Al Furqon.\n" +
+              "Nama calon peserta didik: " + nama + "\n" +
+              "Mohon konfirmasinya. Jazakumullahu khairan."
+            );
+          });
+        }
+
+        /* ---------- Infaq ---------- */
+        var bankBox = $("bankBox");
+
+        function toggleBank() {
+          if (bankBox) bankBox.classList.toggle("show", selected("infakMethod") === "Transfer");
+        }
+        document.querySelectorAll('input[name="infakMethod"]').forEach(function (r) {
+          r.addEventListener("change", toggleBank);
         });
+        toggleBank();
 
-        item.addEventListener("click", function () {
-          var cap = item.querySelector("figcaption");
-          boxImg.src = img.currentSrc || img.src;
-          boxImg.alt = img.alt;
-          boxCap.textContent = cap ? cap.textContent : "";
-          box.classList.add("open");
-        });
+        var infakBtn = $("infakWa");
+        if (infakBtn) {
+          infakBtn.addEventListener("click", function () {
+            var nama = requireName($("infakChildName"));
+            if (!nama) return;
+
+            var method = selected("infakMethod");
+            var msg =
+              "Assalamu'alaikum, saya ingin konfirmasi infaq gedung KB IT Al Furqon.\n" +
+              "Nama calon peserta didik: " + nama + "\n" +
+              "Nominal infaq: " + selected("infakAmount") + "\n" +
+              "Cara pembayaran: " + method;
+
+            if (method === "Transfer") {
+              msg += "\nRekening tujuan: Yayasan Al Furqon Pudakpayung - 1167902296" +
+                "\nBukti transfer akan saya kirim di chat ini.";
+            }
+            openWa(msg);
+          });
+        }
+
+        /* ---------- Lightbox galeri (khusus foto) ---------- */
+        var photos = document.querySelectorAll(".gallery-item.has-image");
+        if (photos.length) {
+          var box = document.createElement("div");
+          box.className = "lightbox";
+          box.setAttribute("role", "dialog");
+          box.setAttribute("aria-modal", "true");
+          box.innerHTML =
+            '<button type="button" aria-label="Tutup">×</button>' +
+            '<img alt=""><p></p>';
+          document.body.appendChild(box);
+
+          var boxImg = box.querySelector("img");
+          var boxCap = box.querySelector("p");
+
+          function closeBox() {
+            box.classList.remove("open");
+            boxImg.removeAttribute("src");
+          }
+
+          box.addEventListener("click", closeBox);
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") closeBox();
+          });
+
+          photos.forEach(function (item) {
+            var img = item.querySelector("img");
+            if (!img) return;
+
+            img.addEventListener("error", function () {
+              item.hidden = true; // sembunyikan jika file foto belum ada
+            });
+
+            item.addEventListener("click", function () {
+              var cap = item.querySelector("figcaption");
+              boxImg.src = img.currentSrc || img.src;
+              boxImg.alt = img.alt;
+              boxCap.textContent = cap ? cap.textContent : "";
+              box.classList.add("open");
+            });
+          });
+        }
       });
-    }
-  });
-})();
-</script>
+    })();
+  </script>
 </body>
+
 </html>
